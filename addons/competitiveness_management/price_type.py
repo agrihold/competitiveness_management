@@ -33,7 +33,7 @@ class price_type(osv.osv):
     _columns = {
         'name': fields.char('Name', size=32, required=True), 
         'code': fields.char('Code', size=2, required=True), 
-        'require_more_info': fields.boolean('require_more_info'), 
+        'require_invoice_info': fields.boolean('Requiere Invoice Info'), 
         'price_record_id': fields.one2many('competitiveness_management.price_record', 'price_type_id', '<no label>'), 
         'massive_price_record_id': fields.one2many('competitiveness_management.massive_price_record', 'price_type_id', '<no label>'), 
     }

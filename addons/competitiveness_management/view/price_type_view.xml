@@ -54,7 +54,7 @@
                             />
                         <field name="code"
                             />
-                        <field name="require_more_info"
+                        <field name="require_invoice_info"
                             />
                      </group>
                     </sheet>
@@ -73,7 +73,7 @@
                     >
                     <field name="name"/>
                     <field name="code"/>
-                    <field name="require_more_info"/>
+                    <field name="require_invoice_info"/>
                 </tree>
             </field>
         </record>

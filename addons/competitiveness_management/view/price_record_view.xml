@@ -64,15 +64,15 @@
                             />
                         <field name="operative"
                             />
-                        <field name="user"
-                            />
-                        <field name="record_date"
-                            />
                         <field name="supplier"
                             />
                         <field name="invoice_number"
                             />
                         <field name="invoice"
+                            />
+                        <field name="user"
+                            />
+                        <field name="record_date"
                             />
                         <field name="price_type_id"
                             />

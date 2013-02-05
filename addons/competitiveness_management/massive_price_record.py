@@ -31,8 +31,8 @@ class massive_price_record(osv.osv):
     _description = 'Massive Price Record'
 
     _columns = {
-        'information_date': fields.date('information_date', required=True), 
-        'operative': fields.many2one('res.partner', 'operative', required=True), 
+        'information_date': fields.date('Information Date', required=True), 
+        'operative': fields.many2one('res.partner', 'Operative', required=True), 
         'price_record_ids': fields.one2many('competitiveness_management.price_record', 'massive_price_record_id', 'Records'), 
         'price_type_id': fields.many2one('competitiveness_management.price_type', 'Price Type', required=True), 
     }

@@ -32,13 +32,13 @@ class price_record(osv.osv):
 
     _columns = {
         'information_date': fields.date('information_date', required=True), 
-        'usd_price': fields.float('usd_price', required=True), 
-        'operative': fields.many2one('res.partner', 'operative', required=True), 
-        'user': fields.many2one('res.users', 'user', readonly=True), 
-        'record_date': fields.datetime('record_date', readonly=True), 
+        'usd_price': fields.float('Price (USD)', required=True), 
+        'operative': fields.many2one('res.partner', 'Operative', required=True), 
         'supplier': fields.many2one('res.partner', 'Supplier'), 
         'invoice_number': fields.char('Invoice Number'), 
         'invoice': fields.binary('Invoice'), 
+        'user': fields.many2one('res.users', 'User', readonly=True), 
+        'record_date': fields.datetime('Recorded', readonly=True), 
         'price_type_id': fields.many2one('competitiveness_management.price_type', 'Price Type', required=True), 
         'massive_price_record_id': fields.many2one('competitiveness_management.massive_price_record', '<no label>'), 
     }
