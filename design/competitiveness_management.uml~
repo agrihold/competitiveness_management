@@ -60,7 +60,7 @@
 			</model>
 		</userDefined>
 </profile>
-<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Tue Feb 05 11:50:05 BRST 2013'>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Tue Feb 05 11:56:50 BRST 2013'>
   <XMI.header>    <XMI.documentation>
       <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
       <XMI.exporterVersion>0.34(6) revised on $Date: 2010-01-11 22:20:14 +0100 (Mon, 11 Jan 2010) $ </XMI.exporterVersion>
@@ -2354,8 +2354,8 @@
                         classname="org.argouml.uml.diagram.ui.PathItemPlacement"
                         figclassname="org.argouml.uml.diagram.ui.FigTextGroup"
                         ownerhref="-64--88-56-1--3d911498:13caa80fd85:-8000:0000000000001EA0"
-                        angle="270.0"
-                        offset="25" />
+                        angle="-90.0"
+                        offset="46" />
       <argouml:pathitem figname="Fig13.2"
                         classname="org.argouml.uml.diagram.ui.PathItemPlacement"
                         figclassname="org.argouml.uml.diagram.ui.FigMultiplicity"
@@ -2378,8 +2378,8 @@
                         classname="org.argouml.uml.diagram.ui.PathItemPlacement"
                         figclassname="org.argouml.uml.diagram.ui.FigAssociationEndAnnotation"
                         ownerhref="-64--88-56-1--3d911498:13caa80fd85:-8000:0000000000001EA2"
-                        angle="135.0"
-                        offset="5" />
+                        angle="-249.0"
+                        offset="74" />
     </private>
     <path name="Fig13.0"
       description="org.argouml.gefext.ArgoFigPoly"
@@ -2435,8 +2435,8 @@
                         classname="org.argouml.uml.diagram.ui.PathItemPlacement"
                         figclassname="org.argouml.uml.diagram.ui.FigAssociationEndAnnotation"
                         ownerhref="-64--88-56-1--3d911498:13caa80fd85:-8000:0000000000001EA8"
-                        angle="162.0"
-                        offset="155" />
+                        angle="160.99999999999997"
+                        offset="120" />
     </private>
     <path name="Fig14.0"
       description="org.argouml.gefext.ArgoFigPoly"
