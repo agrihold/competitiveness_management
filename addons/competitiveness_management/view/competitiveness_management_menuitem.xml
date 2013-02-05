@@ -24,6 +24,53 @@
 -->
 <openerp>
     <data>
+
+        <menuitem
+            name="menu1"
+            id="menu_menu1"
+            sequence="100"
+            />
+
+
+        <menuitem
+            name="menu2"
+            id="menu_menu2"
+            sequence="100"
+            parent="menu_menu1"
+            />
+
+        <record id="action_competitiveness_management_price_type_menu4" model="ir.actions.act_window">
+            <field name="name">menu4</field>
+            <field name="res_model">competitiveness_management.price_type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_competitiveness_management_price_type_filter"/>
+        </record>
+
+        <menuitem
+            name="menu4"
+            id="menu_menu4"
+            sequence="100"
+            action="action_competitiveness_management_price_type_menu4"
+            parent="menu_menu2"
+            />
+
+        <record id="action_competitiveness_management_price_record_menu3" model="ir.actions.act_window">
+            <field name="name">menu3</field>
+            <field name="res_model">competitiveness_management.price_record</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_competitiveness_management_price_record_filter"/>
+        </record>
+
+        <menuitem
+            name="menu3"
+            id="menu_menu3"
+            sequence="100"
+            action="action_competitiveness_management_price_record_menu3"
+            parent="menu_menu2"
+            />
+
     </data>
 </openerp>
 <!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
