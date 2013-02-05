@@ -26,21 +26,21 @@
     <data>
 
         <menuitem
-            name="menu1"
+            name="Menu1"
             id="menu_menu1"
             sequence="100"
             />
 
 
         <menuitem
-            name="menu2"
-            id="menu_menu2"
+            name="Competitiveness Management"
+            id="menu_competitiveness_management"
             sequence="100"
             parent="menu_menu1"
             />
 
-        <record id="action_competitiveness_management_price_type_menu4" model="ir.actions.act_window">
-            <field name="name">menu4</field>
+        <record id="action_competitiveness_management_price_type_price_types" model="ir.actions.act_window">
+            <field name="name">Price Types</field>
             <field name="res_model">competitiveness_management.price_type</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
@@ -48,15 +48,15 @@
         </record>
 
         <menuitem
-            name="menu4"
-            id="menu_menu4"
+            name="Price Types"
+            id="menu_price_types"
             sequence="100"
-            action="action_competitiveness_management_price_type_menu4"
-            parent="menu_menu2"
+            action="action_competitiveness_management_price_type_price_types"
+            parent="menu_competitiveness_management"
             />
 
-        <record id="action_competitiveness_management_price_record_menu3" model="ir.actions.act_window">
-            <field name="name">menu3</field>
+        <record id="action_competitiveness_management_price_record_price_records" model="ir.actions.act_window">
+            <field name="name">Price Records</field>
             <field name="res_model">competitiveness_management.price_record</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
@@ -64,11 +64,27 @@
         </record>
 
         <menuitem
-            name="menu3"
-            id="menu_menu3"
+            name="Price Records"
+            id="menu_price_records"
             sequence="100"
-            action="action_competitiveness_management_price_record_menu3"
-            parent="menu_menu2"
+            action="action_competitiveness_management_price_record_price_records"
+            parent="menu_competitiveness_management"
+            />
+
+        <record id="action_competitiveness_management_massive_price_record_massive_price_records" model="ir.actions.act_window">
+            <field name="name">Massive Price Records</field>
+            <field name="res_model">competitiveness_management.massive_price_record</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_competitiveness_management_massive_price_record_filter"/>
+        </record>
+
+        <menuitem
+            name="Massive Price Records"
+            id="menu_massive_price_records"
+            sequence="100"
+            action="action_competitiveness_management_massive_price_record_massive_price_records"
+            parent="menu_competitiveness_management"
             />
 
     </data>

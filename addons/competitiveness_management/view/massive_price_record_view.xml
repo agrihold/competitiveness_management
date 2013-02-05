@@ -26,20 +26,14 @@
 
 
         <!-- SEARCHVIEW -->
-        <record id="view_competitiveness_management_price_record_filter" model="ir.ui.view">
-            <field name="name">competitiveness_management.price_record.select</field>
-            <field name="model">competitiveness_management.price_record</field>
+        <record id="view_competitiveness_management_massive_price_record_filter" model="ir.ui.view">
+            <field name="name">competitiveness_management.massive_price_record.select</field>
+            <field name="model">competitiveness_management.massive_price_record</field>
             <field name="arch" type="xml">
-                <search string="Price Records" version="7.0">
+                <search string="Massive Price Record" version="7.0">
                         <field name="information_date"
                             />
-                        <field name="usd_price"
-                            />
                         <field name="operative"
-                            />
-                        <field name="user"
-                            />
-                        <field name="record_date"
                             />
                         <field name="price_type_id"
                             />
@@ -49,30 +43,20 @@
 
         <!-- FORMVIEW -->
 
-        <record id="view_competitiveness_management_price_record_form" model="ir.ui.view">
-            <field name="name">competitiveness_management.price_record.form</field>
-            <field name="model">competitiveness_management.price_record</field>
+        <record id="view_competitiveness_management_massive_price_record_form" model="ir.ui.view">
+            <field name="name">competitiveness_management.massive_price_record.form</field>
+            <field name="model">competitiveness_management.massive_price_record</field>
             <field name="arch" type="xml">
-                <form string="Price Records" version="7.0">
+                <form string="Massive Price Record" version="7.0">
                     <header>
                     </header>
-                    <sheet string="Price Records">
+                    <sheet string="Massive Price Record">
                      <group>
                         <field name="information_date"
                             />
-                        <field name="usd_price"
-                            />
                         <field name="operative"
                             />
-                        <field name="user"
-                            />
-                        <field name="record_date"
-                            />
-                        <field name="supplier"
-                            />
-                        <field name="invoice_number"
-                            />
-                        <field name="invoice"
+                        <field name="price_record_ids"
                             />
                         <field name="price_type_id"
                             />
@@ -85,28 +69,26 @@
 
         <!-- TREEVIEW -->
 
-        <record id="view_competitiveness_management_price_record_tree" model="ir.ui.view">
-            <field name="name">competitiveness_management.price_record.tree</field>
-            <field name="model">competitiveness_management.price_record</field>
+        <record id="view_competitiveness_management_massive_price_record_tree" model="ir.ui.view">
+            <field name="name">competitiveness_management.massive_price_record.tree</field>
+            <field name="model">competitiveness_management.massive_price_record</field>
             <field name="arch" type="xml">
-                <tree string="Price Records"
+                <tree string="Massive Price Record"
                     >
                     <field name="information_date"/>
-                    <field name="usd_price"/>
                     <field name="operative"/>
-                    <field name="supplier"/>
                     <field name="price_type_id"/>
                 </tree>
             </field>
         </record>
 
         <!-- WINDOWACTION -->
-        <record id="action_competitiveness_management_price_record_form" model="ir.actions.act_window">
-            <field name="name">Price Records</field>
-            <field name="res_model">competitiveness_management.price_record</field>
+        <record id="action_competitiveness_management_massive_price_record_form" model="ir.actions.act_window">
+            <field name="name">Massive Price Record</field>
+            <field name="res_model">competitiveness_management.massive_price_record</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
-            <field name="search_view_id" ref="view_competitiveness_management_price_record_filter"/>
+            <field name="search_view_id" ref="view_competitiveness_management_massive_price_record_filter"/>
         </record>
 
     </data>

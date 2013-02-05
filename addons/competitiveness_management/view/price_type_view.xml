@@ -54,6 +54,8 @@
                             />
                         <field name="code"
                             />
+                        <field name="require_more_info"
+                            />
                      </group>
                     </sheet>
 
@@ -71,6 +73,7 @@
                     >
                     <field name="name"/>
                     <field name="code"/>
+                    <field name="require_more_info"/>
                 </tree>
             </field>
         </record>
@@ -82,6 +85,7 @@
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
             <field name="search_view_id" ref="view_competitiveness_management_price_type_filter"/>
+            <field name="help">Al cargar precios se debe poder restringuir por gurpo de usuario o usuario que tipos de precios tiene permitido cargar</field>
         </record>
 
     </data>

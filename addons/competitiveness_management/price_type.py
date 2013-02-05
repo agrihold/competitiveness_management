@@ -26,14 +26,16 @@ from osv import osv, fields
 
 class price_type(osv.osv):
     """
-        """
+    Al cargar precios se debe poder restringuir por gurpo de usuario o usuario que tipos de precios tiene permitido cargar    """
     _name = 'competitiveness_management.price_type'
     _description = 'Price Types'
 
     _columns = {
         'name': fields.char('Name', size=32, required=True), 
         'code': fields.char('Code', size=2, required=True), 
+        'require_more_info': fields.boolean('require_more_info'), 
         'price_record_id': fields.one2many('competitiveness_management.price_record', 'price_type_id', '<no label>'), 
+        'massive_price_record_id': fields.one2many('competitiveness_management.massive_price_record', 'price_type_id', '<no label>'), 
     }
 
     _defaults = {

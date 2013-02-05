@@ -21,10 +21,28 @@
 ##############################################################################
 
 
-import price_type
-import massive_price_record
-import price_record
-import wizard
-import report
+import netsvc
+from osv import osv, fields
+
+class massive_price_record(osv.osv):
+    """
+        """
+    _name = 'competitiveness_management.massive_price_record'
+    _description = 'Massive Price Record'
+
+    _columns = {
+        'information_date': fields.date('information_date', required=True), 
+        'operative': fields.many2one('res.partner', 'operative', required=True), 
+        'price_record_ids': fields.one2many('competitiveness_management.price_record', 'massive_price_record_id', 'Records'), 
+        'price_type_id': fields.many2one('competitiveness_management.price_type', 'Price Type', required=True), 
+    }
+
+    _defaults = {
+    }
+
+
+
+
+massive_price_record()
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
