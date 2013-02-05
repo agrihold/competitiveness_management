@@ -60,7 +60,7 @@
 			</model>
 		</userDefined>
 </profile>
-<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Tue Feb 05 11:25:37 BRST 2013'>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Tue Feb 05 11:34:25 BRST 2013'>
   <XMI.header>    <XMI.documentation>
       <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
       <XMI.exporterVersion>0.34(6) revised on $Date: 2010-01-11 22:20:14 +0100 (Mon, 11 Jan 2010) $ </XMI.exporterVersion>
@@ -71,22 +71,6 @@
       name = 'competitiveness_management' isSpecification = 'false' isRoot = 'false'
       isLeaf = 'false' isAbstract = 'false'>
       <UML:Namespace.ownedElement>
-        <UML:Package xmi.id = '127-0-1-1--17588d67:13b392fe554:-8000:0000000000000AD0'
-          name = 'sgr' isSpecification = 'false' isRoot = 'false' isLeaf = 'false'
-          isAbstract = 'false'>
-          <UML:ModelElement.stereotype>
-            <UML:Stereotype href = 'http://argouml.org/user-profiles/OpenObjectStadardElements.xmi#127-0-1-1-663b23fd:13b396ee199:-8000:0000000000000D10'/>
-          </UML:ModelElement.stereotype>
-          <UML:ModelElement.taggedValue>
-            <UML:TaggedValue xmi.id = '127-0-1-1--17588d67:13b392fe554:-8000:0000000000000AD1'
-              isSpecification = 'false'>
-              <UML:TaggedValue.dataValue>SAGI</UML:TaggedValue.dataValue>
-              <UML:TaggedValue.type>
-                <UML:TagDefinition href = 'http://argouml.org/user-profiles/OpenObjectStadardElements.xmi#127-0-1-1-2b464aa4:13b09d81b72:-8000:0000000000001573'/>
-              </UML:TaggedValue.type>
-            </UML:TaggedValue>
-          </UML:ModelElement.taggedValue>
-        </UML:Package>
         <UML:Package xmi.id = '127-0-1-1--17588d67:13b392fe554:-8000:0000000000000ADE'
           name = 'account' isSpecification = 'false' isRoot = 'false' isLeaf = 'false'
           isAbstract = 'false'>
@@ -210,13 +194,6 @@
               name = 'thread' visibility = 'public' isSpecification = 'false' isRoot = 'false'
               isLeaf = 'false' isAbstract = 'false' isActive = 'false'/>
           </UML:Namespace.ownedElement>
-        </UML:Package>
-        <UML:Package xmi.id = '-64--88-56-1--756a3787:13c4e0044db:-8000:0000000000000BF1'
-          name = 'sagi' isSpecification = 'false' isRoot = 'false' isLeaf = 'false'
-          isAbstract = 'false'>
-          <UML:ModelElement.stereotype>
-            <UML:Stereotype href = 'http://argouml.org/user-profiles/OpenObjectStadardElements.xmi#127-0-1-1-663b23fd:13b396ee199:-8000:0000000000000D10'/>
-          </UML:ModelElement.stereotype>
         </UML:Package>
         <UML:Package xmi.id = '-64--88-56-1-13b933e0:13caa54d949:-8000:0000000000000BF0'
           name = 'competitiveness_management' isSpecification = 'false' isRoot = 'false'
@@ -510,7 +487,7 @@
               name = '' isSpecification = 'false' isRoot = 'false' isLeaf = 'false' isAbstract = 'false'>
               <UML:Association.connection>
                 <UML:AssociationEnd xmi.id = '-64--88-56-1-13b933e0:13caa54d949:-8000:0000000000000C25'
-                  visibility = 'public' isSpecification = 'false' isNavigable = 'true' ordering = 'unordered'
+                  visibility = 'public' isSpecification = 'false' isNavigable = 'false' ordering = 'unordered'
                   aggregation = 'none' targetScope = 'instance' changeability = 'changeable'>
                   <UML:AssociationEnd.participant>
                     <UML:UseCase xmi.idref = '-64--88-56-1-13b933e0:13caa54d949:-8000:0000000000000C21'/>
@@ -529,7 +506,7 @@
               name = '' isSpecification = 'false' isRoot = 'false' isLeaf = 'false' isAbstract = 'false'>
               <UML:Association.connection>
                 <UML:AssociationEnd xmi.id = '-64--88-56-1-13b933e0:13caa54d949:-8000:0000000000000C28'
-                  visibility = 'public' isSpecification = 'false' isNavigable = 'true' ordering = 'unordered'
+                  visibility = 'public' isSpecification = 'false' isNavigable = 'false' ordering = 'unordered'
                   aggregation = 'none' targetScope = 'instance' changeability = 'changeable'>
                   <UML:AssociationEnd.participant>
                     <UML:UseCase xmi.idref = '-64--88-56-1-13b933e0:13caa54d949:-8000:0000000000000C22'/>
@@ -567,7 +544,7 @@
               name = '' isSpecification = 'false' isRoot = 'false' isLeaf = 'false' isAbstract = 'false'>
               <UML:Association.connection>
                 <UML:AssociationEnd xmi.id = '-64--88-56-1-13b933e0:13caa54d949:-8000:0000000000000C2F'
-                  visibility = 'public' isSpecification = 'false' isNavigable = 'true' ordering = 'unordered'
+                  visibility = 'public' isSpecification = 'false' isNavigable = 'false' ordering = 'unordered'
                   aggregation = 'none' targetScope = 'instance' changeability = 'changeable'>
                   <UML:AssociationEnd.participant>
                     <UML:UseCase xmi.idref = '-64--88-56-1-13b933e0:13caa54d949:-8000:0000000000000C22'/>
