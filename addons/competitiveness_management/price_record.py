@@ -36,7 +36,6 @@ class price_record(osv.osv):
         'operative': fields.many2one('res.partner', 'Operative', required=True), 
         'supplier': fields.many2one('res.partner', 'Supplier'), 
         'invoice_number': fields.char('Invoice Number'), 
-        'invoice': fields.binary('Invoice'), 
         'user': fields.many2one('res.users', 'User', readonly=True), 
         'record_date': fields.datetime('Recorded', readonly=True), 
         'product': fields.many2one('product.product', 'Product', required=True), 

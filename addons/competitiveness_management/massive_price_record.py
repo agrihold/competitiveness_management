@@ -37,7 +37,7 @@ class massive_price_record(osv.osv):
         'record_date': fields.datetime('record_date', readonly=True), 
         'product': fields.many2one('product.product', 'Product'), 
         'price_record_ids': fields.one2many('competitiveness_management.price_record', 'massive_price_record_id', 'Records'), 
-        'price_type_id': fields.many2one('competitiveness_management.price_type', 'Price Type', required=True), 
+        'price_type_id': fields.many2one('competitiveness_management.price_type', 'Price Type'), 
     }
 
     _defaults = {
