@@ -26,13 +26,16 @@ from osv import osv, fields
 
 class massive_price_record(osv.osv):
     """
-        """
+    Si cualquiera de los datos de esta vista se completa, entonces se pasa dicho valor por contexto a la tabla "price_record"    """
     _name = 'competitiveness_management.massive_price_record'
     _description = 'Massive Price Record'
 
     _columns = {
-        'information_date': fields.date('Information Date', required=True), 
-        'operative': fields.many2one('res.partner', 'Operative', required=True), 
+        'information_date': fields.date('Information Date'), 
+        'operative': fields.many2one('res.partner', 'Operative'), 
+        'user': fields.many2one('res.users', 'user', readonly=True), 
+        'record_date': fields.datetime('record_date', readonly=True), 
+        'product': fields.many2one('product.product', 'Product'), 
         'price_record_ids': fields.one2many('competitiveness_management.price_record', 'massive_price_record_id', 'Records'), 
         'price_type_id': fields.many2one('competitiveness_management.price_type', 'Price Type', required=True), 
     }

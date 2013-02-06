@@ -39,6 +39,7 @@ class price_record(osv.osv):
         'invoice': fields.binary('Invoice'), 
         'user': fields.many2one('res.users', 'User', readonly=True), 
         'record_date': fields.datetime('Recorded', readonly=True), 
+        'product': fields.many2one('product.product', 'Product', required=True), 
         'price_type_id': fields.many2one('competitiveness_management.price_type', 'Price Type', required=True), 
         'massive_price_record_id': fields.many2one('competitiveness_management.massive_price_record', '<no label>'), 
     }

@@ -41,6 +41,8 @@
                             />
                         <field name="record_date"
                             />
+                        <field name="product"
+                            />
                         <field name="price_type_id"
                             />
                 </search>
@@ -74,6 +76,8 @@
                             />
                         <field name="record_date"
                             />
+                        <field name="product"
+                            />
                         <field name="price_type_id"
                             />
                      </group>
@@ -95,6 +99,7 @@
                     <field name="usd_price"/>
                     <field name="operative"/>
                     <field name="supplier"/>
+                    <field name="product"/>
                     <field name="price_type_id"/>
                 </tree>
             </field>

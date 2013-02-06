@@ -35,6 +35,12 @@
                             />
                         <field name="operative"
                             />
+                        <field name="user"
+                            />
+                        <field name="record_date"
+                            />
+                        <field name="product"
+                            />
                         <field name="price_type_id"
                             />
                 </search>
@@ -55,6 +61,12 @@
                         <field name="information_date"
                             />
                         <field name="operative"
+                            />
+                        <field name="user"
+                            />
+                        <field name="record_date"
+                            />
+                        <field name="product"
                             />
                         <field name="price_record_ids"
                             />
@@ -77,6 +89,7 @@
                     >
                     <field name="information_date"/>
                     <field name="operative"/>
+                    <field name="product"/>
                     <field name="price_type_id"/>
                 </tree>
             </field>
@@ -89,6 +102,7 @@
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
             <field name="search_view_id" ref="view_competitiveness_management_massive_price_record_filter"/>
+            <field name="help">Si cualquiera de los datos de esta vista se completa, entonces se pasa dicho valor por contexto a la tabla "price_record"</field>
         </record>
 
     </data>

@@ -25,7 +25,7 @@
     'author': 'No author.',
     'category': u'base.module_category_knowledge_management',
     'demo_xml': [],
-    'depends': [u'mail'],
+    'depends': [u'mail', u'product'],
     'description': u'Agrihold Costs and Competitiveness Management',
     'init_xml': [],
     'installable': True,
