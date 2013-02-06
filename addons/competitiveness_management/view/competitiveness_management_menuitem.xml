@@ -39,6 +39,22 @@
             parent="menu_menu1"
             />
 
+        <record id="action_competitiveness_management_price_record_price_records" model="ir.actions.act_window">
+            <field name="name">Price Records</field>
+            <field name="res_model">competitiveness_management.price_record</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_competitiveness_management_price_record_filter"/>
+        </record>
+
+        <menuitem
+            name="Price Records"
+            id="menu_price_records"
+            sequence="10"
+            action="action_competitiveness_management_price_record_price_records"
+            parent="menu_competitiveness_management"
+            />
+
         <record id="action_competitiveness_management_price_type_price_types" model="ir.actions.act_window">
             <field name="name">Price Types</field>
             <field name="res_model">competitiveness_management.price_type</field>
@@ -55,22 +71,6 @@
             parent="menu_competitiveness_management"
             />
 
-        <record id="action_competitiveness_management_price_record_price_records" model="ir.actions.act_window">
-            <field name="name">Price Records</field>
-            <field name="res_model">competitiveness_management.price_record</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
-            <field name="search_view_id" ref="view_competitiveness_management_price_record_filter"/>
-        </record>
-
-        <menuitem
-            name="Price Records"
-            id="menu_price_records"
-            sequence="100"
-            action="action_competitiveness_management_price_record_price_records"
-            parent="menu_competitiveness_management"
-            />
-
         <record id="action_competitiveness_management_massive_price_record_massive_price_records" model="ir.actions.act_window">
             <field name="name">Massive Price Records</field>
             <field name="res_model">competitiveness_management.massive_price_record</field>
@@ -82,7 +82,7 @@
         <menuitem
             name="Massive Price Records"
             id="menu_massive_price_records"
-            sequence="100"
+            sequence="20"
             action="action_competitiveness_management_massive_price_record_massive_price_records"
             parent="menu_competitiveness_management"
             />
