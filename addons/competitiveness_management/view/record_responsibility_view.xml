@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    Agrihold Costs and Competitiveness Management
+#    Copyright (C) 2013 No author.
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- competitiveness_management.record_responsibility -->
+<!-- competitiveness_management.record_responsibility -->
+<!-- competitiveness_management.record_responsibility -->
+<openerp>
+    <data>
+
+        <!-- SEARCHVIEW -->
+        <record id="view_competitiveness_management_record_responsibility_filter" model="ir.ui.view">
+            <field name="name">competitiveness_management.record_responsibility.select</field>
+            <field name="model">competitiveness_management.record_responsibility</field>
+            <field name="arch" type="xml">
+                <search string="Record Responsabilities" version="7.0">
+                </search>
+            </field>
+        </record>
+
+        <!-- FORMVIEW -->
+        <record id="view_competitiveness_management_record_responsibility_form" model="ir.ui.view">
+            <field name="name">competitiveness_management.record_responsibility.form</field>
+            <field name="model">competitiveness_management.record_responsibility</field>
+            <field name="arch" type="xml">
+                <form string="Record Responsabilities" version="7.0">
+                    <header>
+                    </header>
+                    <sheet string="Record Responsabilities">
+                     <group>
+                        <field name="interval_number"
+                            />
+                        <field name="interval_type"
+                            />
+                        <field name="nextcall"
+                            />
+                        <field name="note"
+                            />
+                    <field name="user_id"
+                            />
+                    <field name="price_type_id"
+                            />
+                     </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <!-- TREEVIEW -->
+
+        <record id="view_competitiveness_management_record_responsibility_tree" model="ir.ui.view">
+            <field name="name">competitiveness_management.record_responsibility.tree</field>
+            <field name="model">competitiveness_management.record_responsibility</field>
+            <field name="arch" type="xml">
+                <tree string="Record Responsabilities"
+                    >
+                    <field name="interval_number"
+                        />
+                    <field name="interval_type"
+                        />
+                    <field name="nextcall"
+                        />
+                    <field name="note"
+                        />
+                    <field name="user_id"
+                        />
+                    <field name="price_type_id"
+                        />
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

@@ -21,9 +21,11 @@
 #
 ##############################################################################
 -->
+<!-- competitiveness_management.price_record -->
+<!-- competitiveness_management.price_record -->
+<!-- competitiveness_management.price_record -->
 <openerp>
     <data>
-
 
         <!-- SEARCHVIEW -->
         <record id="view_competitiveness_management_price_record_filter" model="ir.ui.view">
@@ -31,11 +33,15 @@
             <field name="model">competitiveness_management.price_record</field>
             <field name="arch" type="xml">
                 <search string="Price Records" version="7.0">
+                        <field name="product_id"
+                            />
+                        <field name="commercial_name"
+                            />
                         <field name="information_date"
                             />
                         <field name="usd_price"
                             />
-                        <field name="operative"
+                        <field name="operative_id"
                             />
                         <field name="supplier"
                             />
@@ -45,16 +51,15 @@
                             />
                         <field name="record_date"
                             />
-                        <field name="product"
-                            />
                         <field name="price_type_id"
+                            />
+                        <field name="price_term_id"
                             />
                 </search>
             </field>
         </record>
 
         <!-- FORMVIEW -->
-
         <record id="view_competitiveness_management_price_record_form" model="ir.ui.view">
             <field name="name">competitiveness_management.price_record.form</field>
             <field name="model">competitiveness_management.price_record</field>
@@ -64,11 +69,15 @@
                     </header>
                     <sheet string="Price Records">
                      <group>
+                        <field name="product_id"
+                            />
+                        <field name="commercial_name"
+                            />
                         <field name="information_date"
                             />
                         <field name="usd_price"
                             />
-                        <field name="operative"
+                        <field name="operative_id"
                             />
                         <field name="supplier"
                             />
@@ -78,9 +87,9 @@
                             />
                         <field name="record_date"
                             />
-                        <field name="product"
+                    <field name="price_type_id"
                             />
-                        <field name="price_type_id"
+                    <field name="price_term_id"
                             />
                      </group>
                     </sheet>
@@ -97,24 +106,26 @@
             <field name="arch" type="xml">
                 <tree string="Price Records"
                     >
-                    <field name="information_date"/>
-                    <field name="usd_price"/>
-                    <field name="operative"/>
-                    <field name="supplier"/>
-                    <field name="invoice_number"/>
-                    <field name="product"/>
-                    <field name="price_type_id"/>
+                    <field name="product_id"
+                        />
+                    <field name="commercial_name"
+                        />
+                    <field name="information_date"
+                        />
+                    <field name="usd_price"
+                        />
+                    <field name="operative_id"
+                        />
+                    <field name="supplier"
+                        />
+                    <field name="invoice_number"
+                        />
+                    <field name="price_type_id"
+                        />
+                    <field name="price_term_id"
+                        />
                 </tree>
             </field>
-        </record>
-
-        <!-- WINDOWACTION -->
-        <record id="action_competitiveness_management_price_record_form" model="ir.actions.act_window">
-            <field name="name">Price Records</field>
-            <field name="res_model">competitiveness_management.price_record</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
-            <field name="search_view_id" ref="view_competitiveness_management_price_record_filter"/>
         </record>
 
     </data>

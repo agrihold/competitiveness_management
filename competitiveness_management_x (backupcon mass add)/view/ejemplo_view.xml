@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    
+#    Copyright (C) 2013 No author.
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<openerp>
+    <data>
+<!-- TODO: agregar a la action de price_record la vista "graph". Hacer que la vista tree sea editable (de price record)-->
+
+
+        <record id="view_competitiveness_management_price_record_tree" model="ir.ui.view">
+            <field name="name">competitiveness_management_x.price_record.tree</field>
+            <field name="model">competitiveness_management.price_record</field>
+            <field name="inherit_id" ref="competitiveness_management.view_competitiveness_management_price_record_tree"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="product" position="replace"/>                    
+                    <field name="information_date" position="before"> 
+                        <field name="product"/>  
+                    </field>     
+                    <field name="price_type_id" position="replace"/>
+                    <field name="operative" position="before">
+                        <field name="price_type_id"/>
+                    </field>
+                    <!--<tree string="Price Records" position="replace">
+                            <tree string="Price Records" editable="top"/>
+                    </tree>-->
+                </data>
+            </field>
+        </record>
+
+        <record id="view_competitiveness_management_price_record_form" model="ir.ui.view">
+            <field name="name">competitiveness_management_x.view_competitiveness_management_price_record_form2</field>
+            <field name="model">competitiveness_management.price_record</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="competitiveness_management.view_competitiveness_management_price_record_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="product" position="replace"/>                    
+                    <field name="information_date" position="before"> 
+                        <field name="product"/>  
+                    </field> 
+                    <field name="price_type_id" position="replace"/>                
+                    <field name="operative" position="before">
+                        <field name="price_type_id"/>
+                    </field>
+                </data>
+            </field>
+        </record>
+
+        <record id="view_competitiveness_management_massive_price_record_form" model="ir.ui.view">
+            <field name="name">competitiveness_management_x.massive_price_record.form2</field>
+            <field name="model">competitiveness_management.massive_price_record</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="competitiveness_management.view_competitiveness_management_massive_price_record_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="product" position="replace"/>                    
+                    <field name="information_date" position="before"> 
+                        <field name="product"/>  
+                    </field>     
+                    <field name="price_type_id" position="replace"/>                
+                    <field name="price_record_ids" position="replace"/>                    
+                    <field name="operative" position="before">
+                        <field name="price_type_id"/>
+                    </field>
+                    <field name="operative" position="after">              
+                        <field name="price_record_ids">
+                            <tree string="Price Records"  editable="top">
+                                <field name="information_date"/>
+                                <field name="product"/>
+                                <field name="usd_price"/>
+                                <field name="price_type_id"/>
+                                <field name="operative"/>
+                                <field name="supplier"/>
+                                <field name="invoice_number"/>
+                            </tree>
+                        </field>
+                   </field>                      
+                </data>
+            </field>
+        </record>
+
+        <record id="view_competitiveness_management_price_record_filter" model="ir.ui.view">
+            <field name="name">competitiveness_management.price_record.select2</field>
+            <field name="model">competitiveness_management.price_record</field>
+            <field name="inherit_id" ref="competitiveness_management.view_competitiveness_management_price_record_filter"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="price_type_id" position="after">
+                        <group expand="0" string="Group by...">
+                            <filter string="Price Type" context="{'group_by':'price_type_id'}"/>
+                            <filter string="Supplier" context="{'group_by':'supplier'}"/>
+                            <filter string="Product" context="{'group_by':'product'}"/>
+                        </group>
+                    </field>
+                </data>
+            </field>
+        </record> 
+
+
+        <record id="view_competitiveness_management_price_record_graph" model="ir.ui.view">
+            <field name="name">competitiveness_management.price_record.graph</field>
+            <field name="model">competitiveness_management.price_record</field>
+            <field name="arch" type="xml">
+                <graph string="Project Tasks" type="bar">
+                    <field name="information_date"/>
+                    <field name="usd_price" operator="+"/>
+                    <field name="price_type_id" group="True"/>
+                </graph>
+            </field>
+        </record>
+
+
+        <!--<record id="competitiveness_management.action_competitiveness_management_price_record_form" model="ir.actions.act_window">
+            <field name="name">Price Records</field>
+            <field name="res_model">competitiveness_management.price_record</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,graph</field>
+            <field name="search_view_id" ref="competitiveness_management.view_competitiveness_management_price_record_filter"/>
+        </record> -->
+
+
+<!-- POSITIONS QUE EXISTEN replace / after / before / inside -->
+    
+<!-- EKEMPLO DEFINICION VISTA -->
+        <!-- SEARCHVIEW -->
+<!--
+        <record id="view_sagi_sagi_filter" model="ir.ui.view">
+            <field name="name">sagi.sagi.select</field>
+            <field name="model">sagi.sagi</field>
+            <field name="arch" type="xml">
+                <search string="sagi" version="7.0">
+                        <field name="agronomic_class"
+                            />
+                </search>
+            </field>
+        </record>
+-->
+        <!-- FORMVIEW -->
+<!--
+        <record id="view_sagi_sagi_form" model="ir.ui.view">
+            <field name="name">sagi.sagi.form</field>
+            <field name="model">sagi.sagi</field>
+            <field name="arch" type="xml">
+                <form string="sagi" version="7.0">
+                    <header>
+                        <button name="action_wfk_set_draft"
+                            type="object"
+                            states="cancelled"
+                            string="To Draft"
+                            />
+                        <button name="sgn_close_project"
+                            states="on_closure"
+                            string="Close Project"
+                            />
+                        <button name="sgn_abort"
+                            states="on_excecution_and_control,on_closure"
+                            string="Abort"
+                            />
+                        <button name="sgn_reject"
+                            states="on_creation,on_initiation"
+                            string="Reject"
+                            />
+                        <button name="sgn_cancel"
+                            states="on_excecution_and_control,on_closure,draft,aborted,on_creation,on_planning,on_initiation,rejected,closed"
+                            string="Cancel"
+                            />
+                        <button name="sgn_next_stage"
+                            states="on_creation,on_excecution_and_control,draft,on_initiation,on_planning"
+                            string="Next Stage"
+                            />
+                        <field name="state" widget="statusbar"
+                            statusbar_colors='{}'
+                            />
+                    </header>
+                    <sheet string="sagi">
+                     <group>
+                        <field name="agronomic_class"
+                            />
+                        <field name="create_date"
+                            />
+                        <field name="created_by"
+                            />
+                     </group>
+                    </sheet>
+
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+
+                </form>
+            </field>
+        </record>
+-->
+        <!-- TREEVIEW -->
+<!--
+        <record id="view_sagi_sagi_tree" model="ir.ui.view">
+            <field name="name">sagi.sagi.tree</field>
+            <field name="model">sagi.sagi</field>
+            <field name="arch" type="xml">
+                <tree string="sagi"
+                    colors="grey:state=='cancelled';blue:state in ('draft',);black:state in ('on_creation', 'on_closure', 'on_excecution_and_control', 'on_planning', 'on_initiation'); red:state in ()"
+                    >
+                    <field name="agronomic_class"/>
+                    <field name="create_date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+-->
+        <!-- WINDOWACTION -->
+<!--
+        <record id="action_sagi_sagi_form" model="ir.actions.act_window">
+            <field name="name">sagi</field>
+            <field name="res_model">sagi.sagi</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_sagi_sagi_filter"/>
+        </record>
+-->
+<!--FIN EJEMPLO-->
+    
+	</data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

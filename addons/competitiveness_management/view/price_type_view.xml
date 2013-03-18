@@ -21,9 +21,11 @@
 #
 ##############################################################################
 -->
+<!-- competitiveness_management.price_type -->
+<!-- competitiveness_management.price_type -->
+<!-- competitiveness_management.price_type -->
 <openerp>
     <data>
-
 
         <!-- SEARCHVIEW -->
         <record id="view_competitiveness_management_price_type_filter" model="ir.ui.view">
@@ -40,7 +42,6 @@
         </record>
 
         <!-- FORMVIEW -->
-
         <record id="view_competitiveness_management_price_type_form" model="ir.ui.view">
             <field name="name">competitiveness_management.price_type.form</field>
             <field name="model">competitiveness_management.price_type</field>
@@ -53,8 +54,6 @@
                         <field name="name"
                             />
                         <field name="code"
-                            />
-                        <field name="require_invoice_info"
                             />
                      </group>
                     </sheet>
@@ -71,21 +70,12 @@
             <field name="arch" type="xml">
                 <tree string="Price Types"
                     >
-                    <field name="name"/>
-                    <field name="code"/>
-                    <field name="require_invoice_info"/>
+                    <field name="name"
+                        />
+                    <field name="code"
+                        />
                 </tree>
             </field>
-        </record>
-
-        <!-- WINDOWACTION -->
-        <record id="action_competitiveness_management_price_type_form" model="ir.actions.act_window">
-            <field name="name">Price Types</field>
-            <field name="res_model">competitiveness_management.price_type</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
-            <field name="search_view_id" ref="view_competitiveness_management_price_type_filter"/>
-            <field name="help">Al cargar precios se debe poder restringuir por gurpo de usuario o usuario que tipos de precios tiene permitido cargar</field>
         </record>
 
     </data>

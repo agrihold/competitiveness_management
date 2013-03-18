@@ -26,17 +26,46 @@
     <data>
 
         <menuitem
-            name="Menu1"
-            id="menu_menu1"
+            name="Price Management"
+            id="menu_price_management"
             sequence="100"
+            groups="group_view"
             />
 
 
         <menuitem
             name="Competitiveness Management"
             id="menu_competitiveness_management"
+            sequence="10"
+            parent="menu_price_management"
+            groups="group_view"
+            />
+
+
+        <menuitem
+            name="Configuration"
+            id="menu_configuration"
             sequence="100"
-            parent="menu_menu1"
+            parent="menu_price_management"
+            groups="group_manager,group_manager,group_view"
+            />
+
+        <record id="action_competitiveness_management_payment_term_payment_terms" model="ir.actions.act_window">
+            <field name="name">Payment Terms</field>
+            <field name="res_model">competitiveness_management.payment_term</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_competitiveness_management_payment_term_tree"/>
+            <field name="search_view_id" ref="view_competitiveness_management_payment_term_filter"/>
+        </record>
+
+        <menuitem
+            name="Payment Terms"
+            id="menu_payment_terms"
+            sequence="100"
+            action="action_competitiveness_management_payment_term_payment_terms"
+            parent="menu_configuration"
+            groups="group_manager,group_manager,group_view"
             />
 
         <record id="action_competitiveness_management_price_record_price_records" model="ir.actions.act_window">
@@ -44,6 +73,7 @@
             <field name="res_model">competitiveness_management.price_record</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_competitiveness_management_price_record_tree"/>
             <field name="search_view_id" ref="view_competitiveness_management_price_record_filter"/>
         </record>
 
@@ -53,6 +83,7 @@
             sequence="10"
             action="action_competitiveness_management_price_record_price_records"
             parent="menu_competitiveness_management"
+            groups="group_view"
             />
 
         <record id="action_competitiveness_management_price_type_price_types" model="ir.actions.act_window">
@@ -60,6 +91,7 @@
             <field name="res_model">competitiveness_management.price_type</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_competitiveness_management_price_type_tree"/>
             <field name="search_view_id" ref="view_competitiveness_management_price_type_filter"/>
         </record>
 
@@ -68,23 +100,26 @@
             id="menu_price_types"
             sequence="100"
             action="action_competitiveness_management_price_type_price_types"
-            parent="menu_competitiveness_management"
+            parent="menu_configuration"
+            groups="group_manager,group_manager,group_view"
             />
 
-        <record id="action_competitiveness_management_massive_price_record_massive_price_records" model="ir.actions.act_window">
-            <field name="name">Massive Price Records</field>
-            <field name="res_model">competitiveness_management.massive_price_record</field>
+        <record id="action_competitiveness_management_record_responsibility_responsabilities" model="ir.actions.act_window">
+            <field name="name">Responsabilities</field>
+            <field name="res_model">competitiveness_management.record_responsibility</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
-            <field name="search_view_id" ref="view_competitiveness_management_massive_price_record_filter"/>
+            <field name="view_id" ref="view_competitiveness_management_record_responsibility_tree"/>
+            <field name="search_view_id" ref="view_competitiveness_management_record_responsibility_filter"/>
         </record>
 
         <menuitem
-            name="Massive Price Records"
-            id="menu_massive_price_records"
-            sequence="20"
-            action="action_competitiveness_management_massive_price_record_massive_price_records"
-            parent="menu_competitiveness_management"
+            name="Responsabilities"
+            id="menu_responsabilities"
+            sequence="100"
+            action="action_competitiveness_management_record_responsibility_responsabilities"
+            parent="menu_configuration"
+            groups="group_manager,group_manager,group_view"
             />
 
     </data>

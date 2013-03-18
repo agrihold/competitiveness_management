@@ -21,8 +21,11 @@
 ##############################################################################
 
 
+import product
+import commercial_name
+import payment_term
 import price_type
-import massive_price_record
+import record_responsibility
 import price_record
 import wizard
 import report

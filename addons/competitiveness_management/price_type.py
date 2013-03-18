@@ -21,27 +21,28 @@
 ##############################################################################
 
 
+import re
 import netsvc
 from osv import osv, fields
 
 class price_type(osv.osv):
-    """
-    Al cargar precios se debe poder restringuir por gurpo de usuario o usuario que tipos de precios tiene permitido cargar    """
+    """Al cargar precios se debe poder restringuir por gurpo de usuario o usuario que tipos de precios tiene permitido cargar"""
     _name = 'competitiveness_management.price_type'
-    _description = 'Price Types'
+    _description = 'Al cargar precios se debe poder restringuir por gurpo de usuario'
+
+    _states_ = [
+    ]
 
     _columns = {
-        'name': fields.char('Name', size=32, required=True), 
-        'code': fields.char('Code', size=2, required=True), 
-        'require_invoice_info': fields.boolean('Requiere Invoice Info'), 
-        'price_record_id': fields.one2many('competitiveness_management.price_record', 'price_type_id', '<no label>'), 
-        'massive_price_record_id': fields.one2many('competitiveness_management.massive_price_record', 'price_type_id', '<no label>'), 
+        'name': fields.char(string='Name', required=True, size=32),
+        'code': fields.char(string='Code', required=True, size=2),
+        'require_invoice_info': fields.boolean(string='Requiere Invoice Info'),
+        'price_record_id': fields.one2many('competitiveness_management.price_record', 'price_type_id', string='&lt;no label&gt;'), 
+        'record_responsibility_ids': fields.one2many('competitiveness_management.record_responsibility', 'price_type_id', string='record_responsibility_ids'), 
     }
 
     _defaults = {
     }
-
-
 
 
 price_type()
