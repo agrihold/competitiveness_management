@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    
+#    Agrihold Costs and Competitiveness Management
 #    Copyright (C) 2013 No author.
 #    No email
 #
@@ -20,7 +20,20 @@
 #
 ##############################################################################
 
-import price_record
-import users
-import price_type
+
+import re
+import netsvc
+from osv import osv, fields
+
+class price_type(osv.osv):
+    _inherit = 'competitiveness_management.price_type'    
+    _columns = {
+        'users_ids': fields.many2many('res.users', 'competitiveness_management_x_price_type_ids_users_ids_rel', 'price_type_id', 'user_id', string='Users'), 
+    }
+
+    _defaults = {
+    }
+
+price_type()
+
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

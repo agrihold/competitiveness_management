@@ -47,6 +47,8 @@
                     </header>
                     <sheet string="Record Responsabilities">
                      <group>
+                        <field name="user_id"
+                            />
                         <field name="interval_number"
                             />
                         <field name="interval_type"
@@ -54,8 +56,6 @@
                         <field name="nextcall"
                             />
                         <field name="note"
-                            />
-                    <field name="user_id"
                             />
                     <field name="price_type_id"
                             />
@@ -74,6 +74,8 @@
             <field name="arch" type="xml">
                 <tree string="Record Responsabilities"
                     >
+                    <field name="user_id"
+                        />
                     <field name="interval_number"
                         />
                     <field name="interval_type"
@@ -81,8 +83,6 @@
                     <field name="nextcall"
                         />
                     <field name="note"
-                        />
-                    <field name="user_id"
                         />
                     <field name="price_type_id"
                         />

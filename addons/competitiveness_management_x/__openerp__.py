@@ -39,6 +39,7 @@
                 'security/ir.model.access.csv',
                 'security/security.xml',
                 'view/product_view.xml',
+                'view/price_type_view.xml',
                 'data/price_type_date.xml',],
     'version': 'No version',
    # 'auto_install': False,

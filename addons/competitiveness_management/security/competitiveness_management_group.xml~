@@ -1,7 +1,8 @@
-# -*- coding: utf-8 -*-
+<?xml version="1.0" encoding="utf-8"?>
+<!--
 ##############################################################################
 #
-#    
+#    Agrihold Costs and Competitiveness Management
 #    Copyright (C) 2013 No author.
 #    No email
 #
@@ -20,7 +21,11 @@
 #
 ##############################################################################
 
-import price_record
-import users
-import price_type
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+-->
+<openerp>
+    <data>
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

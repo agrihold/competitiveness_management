@@ -34,11 +34,11 @@ class record_responsibility(osv.osv):
     ]
 
     _columns = {
+        'user_id': fields.many2one('res.users', string='User', required=True),
         'interval_number': fields.integer(string='Interval Number', required=True),
         'interval_type': fields.selection([(u'days', u'Days'), (u'weeks', u'Weeks'), (u'months', u'Months')], string='Interval Unit', required=True),
         'nextcall': fields.datetime(string='Next Execution Date', required=True),
         'note': fields.text(string='Note'),
-        'user_id': fields.many2one('res.users', string='User', required=True), 
         'price_type_id': fields.many2one('competitiveness_management.price_type', string='Price Type', required=True, ondelete='cascade'), 
     }
 

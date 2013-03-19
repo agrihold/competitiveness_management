@@ -32,8 +32,20 @@
         <field name="global" eval="True"/>
         <field name="domain_force">['|',('operative_id','=',False),('operative_id','child_of',[user.company_id.id])]</field>
     </record>
-    </data>
 
+    
+    <record model="ir.rule" id="price_record_user_rule">
+        <field name="name" >Price Record User Price types edit</field>
+        <field name="model_id" ref="competitiveness_management.model_competitiveness_management_price_record"/>
+        <field name="groups" eval="[(4,ref('competitiveness_management.group_user'))]"/>        
+        <field name="domain_force">[('price_type_id','in',user.price_type_ids)]</field>
+        <field name="perm_read" eval='False'/>
+        <field name="perm_write" eval='True'/>
+        <field name="perm_create" eval='True'/>
+        <field name="perm_unlink" eval='True'/>          
+    </record>       
+
+    </data>
 </openerp>
 <!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
      -->
