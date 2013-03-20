@@ -60,7 +60,7 @@
 			</model>
 		</userDefined>
 </profile>
-<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Tue Mar 19 10:27:34 BRT 2013'>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Wed Mar 20 19:02:21 BRT 2013'>
   <XMI.header>    <XMI.documentation>
       <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
       <XMI.exporterVersion>0.34(6) revised on $Date: 2010-01-11 22:20:14 +0100 (Mon, 11 Jan 2010) $ </XMI.exporterVersion>
@@ -2027,8 +2027,8 @@
                         classname="org.argouml.uml.diagram.ui.PathItemPlacement"
                         figclassname="org.argouml.uml.diagram.ui.FigAssociationEndAnnotation"
                         ownerhref="-64--88-56-1-13b933e0:13caa54d949:-8000:0000000000000C0E"
-                        angle="339.0"
-                        offset="534" />
+                        angle="133.0"
+                        offset="106" />
       <argouml:pathitem figname="Fig2.4"
                         classname="org.argouml.uml.diagram.ui.PathItemPlacement"
                         figclassname="org.argouml.uml.diagram.ui.FigMultiplicity"
@@ -2039,8 +2039,8 @@
                         classname="org.argouml.uml.diagram.ui.PathItemPlacement"
                         figclassname="org.argouml.uml.diagram.ui.FigAssociationEndAnnotation"
                         ownerhref="-64--88-56-1-13b933e0:13caa54d949:-8000:0000000000000C0F"
-                        angle="151.0"
-                        offset="126" />
+                        angle="156.0"
+                        offset="154" />
     </private>
     <path name="Fig2.0"
       description="org.argouml.gefext.ArgoFigPoly"
@@ -2560,7 +2560,7 @@
     </path>
   </group>
   <group name="Fig9"
-       description="org.argouml.uml.diagram.use_case.ui.FigUseCase[1120, 344, 322, 102]pathVisible=true;stereotypeView=0;extensionPointVisible=false"
+       description="org.argouml.uml.diagram.use_case.ui.FigUseCase[1280, 240, 322, 102]pathVisible=true;stereotypeView=0;extensionPointVisible=false"
        href="-64--88-56-1-13b933e0:13caa54d949:-8000:0000000000000C2D"
        fill="1"
        fillcolor="white"
@@ -2571,8 +2571,8 @@
     </private>
     
     <ellipse name="Fig9.0"
-      x="1281"
-      y="395"
+      x="1441"
+      y="291"
       rx="161"
       ry="51"
       fill="1"
@@ -2581,8 +2581,8 @@
       strokecolor="black"
     />
     <text name="Fig9.1"
-      x="1135"
-      y="374"
+      x="1295"
+      y="270"
       width="291"
       height="41"
       fill="0"
@@ -2597,7 +2597,7 @@
       justification="Center"
     >competitiveness_management::Configuration</text>
     <group name="Fig9.2"
-         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[1135, 374, 291, 19]"
+         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[1295, 270, 291, 19]"
          href="-64--88-56-1-13b933e0:13caa54d949:-8000:0000000000000C2D"
          fill="0"
          fillcolor="white"
@@ -2608,8 +2608,8 @@
       </private>
       
       <rectangle name="Fig9.2.0"
-        x="1135"
-        y="374"
+        x="1295"
+        y="270"
         width="291"
         height="19"
         fill="0"
@@ -2618,8 +2618,8 @@
         strokecolor="black"
       />
       <text name="Fig9.2.1"
-        x="1135"
-        y="374"
+        x="1295"
+        y="270"
         width="291"
         height="17"
         fill="0"
@@ -2721,10 +2721,10 @@
       stroke="1"
       strokecolor="black"
     >
-      <moveto x="377"
-              y="131" />
-      <lineto x="1162"
-              y="360" />
+      <moveto x="404"
+              y="119" />
+      <lineto x="1298"
+              y="267" />
     </path>
   </group>
   <group name="Fig11"
@@ -2780,8 +2780,8 @@
     >
       <moveto x="1085"
               y="424" />
-      <lineto x="1296"
-              y="493" />
+      <lineto x="1360"
+              y="478" />
     </path>
   </group>
   <group name="Fig12"
@@ -3396,9 +3396,9 @@
       stroke="1"
       strokecolor="black"
     >
-      <moveto x="1220"
-              y="442" />
-      <lineto x="784"
+      <moveto x="1378"
+              y="338" />
+      <lineto x="786"
               y="787" />
     </path>
   </group>
@@ -3460,7 +3460,7 @@
     </path>
   </group>
   <group name="Fig18"
-       description="org.argouml.uml.diagram.use_case.ui.FigUseCase[1248, 480, 312, 98]pathVisible=true;stereotypeView=0;extensionPointVisible=false"
+       description="org.argouml.uml.diagram.use_case.ui.FigUseCase[1336, 456, 312, 98]pathVisible=true;stereotypeView=0;extensionPointVisible=false"
        href="127-0-1-1-361a4d4d:13d4bd4a817:-8000:00000000000014D7"
        fill="1"
        fillcolor="white"
@@ -3471,8 +3471,8 @@
     </private>
     
     <ellipse name="Fig18.0"
-      x="1404"
-      y="529"
+      x="1492"
+      y="505"
       rx="156"
       ry="49"
       fill="1"
@@ -3481,8 +3481,8 @@
       strokecolor="black"
     />
     <text name="Fig18.1"
-      x="1265"
-      y="508"
+      x="1353"
+      y="484"
       width="278"
       height="41"
       fill="0"
@@ -3497,7 +3497,7 @@
       justification="Center"
     >competitiveness_management::Price Types</text>
     <group name="Fig18.2"
-         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[1265, 508, 278, 19]"
+         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[1353, 484, 278, 19]"
          href="127-0-1-1-361a4d4d:13d4bd4a817:-8000:00000000000014D7"
          fill="0"
          fillcolor="white"
@@ -3508,8 +3508,8 @@
       </private>
       
       <rectangle name="Fig18.2.0"
-        x="1265"
-        y="508"
+        x="1353"
+        y="484"
         width="278"
         height="19"
         fill="0"
@@ -3518,8 +3518,8 @@
         strokecolor="black"
       />
       <text name="Fig18.2.1"
-        x="1265"
-        y="508"
+        x="1353"
+        y="484"
         width="278"
         height="17"
         fill="0"
@@ -3621,10 +3621,10 @@
       stroke="1"
       strokecolor="black"
     >
-      <moveto x="1324"
-              y="444" />
-      <lineto x="1359"
-              y="482" />
+      <moveto x="1453"
+              y="341" />
+      <lineto x="1480"
+              y="456" />
     </path>
   </group>
   <group name="Fig20"
@@ -3987,9 +3987,9 @@
       stroke="1"
       strokecolor="black"
     >
-      <moveto x="1234"
-              y="443" />
-      <lineto x="717"
+      <moveto x="1391"
+              y="339" />
+      <lineto x="721"
               y="994" />
     </path>
   </group>
@@ -4213,7 +4213,7 @@
       justification="Center"
     >product</text>
     <group name="Fig26.2"
-         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[1377, 889, 207, 0]"
+         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[1377, 889, 256, 0]"
          href="127-0-1-1-5ad54636:13d7e1e02a4:-8000:0000000000002937"
          fill="0"
          fillcolor="white"
@@ -4227,7 +4227,7 @@
       <rectangle name="Fig26.2.0"
         x="1377"
         y="889"
-        width="207"
+        width="256"
         height="0"
         fill="0"
         fillcolor="white"

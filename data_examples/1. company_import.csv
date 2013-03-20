@@ -1,0 +1,6 @@
+id,name,parent_id
+Agrihold,Agrihold,
+Caelum,Caelum,Agrihold
+Agrotec,Agrotec,Agrihold
+Solaris,Solaris,Agrihold
+Alta,Alta,Agrihold
