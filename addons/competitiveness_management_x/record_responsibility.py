@@ -30,40 +30,25 @@ from openerp.tools import DEFAULT_SERVER_DATE_FORMAT, DEFAULT_SERVER_DATETIME_FO
 import openerp.addons.decimal_precision as dp
 from openerp import netsvc
 
-class price_record(osv.osv):
+class record_responsibility(osv.osv):
     """"""
-    _name = 'competitiveness_management.price_record'
+    _name = 'competitiveness_management.record_responsibility'
     _inherit = [ _name ]
-    _order = 'information_date desc'
     
-    def _compute_commercial_name(self, cr, uid, ids, name, arg, context=None):
-        result = {}
-        if context is None:
-            context = {}
-        
-        for price_record in self.browse(cr, uid, ids, context=context):
-            if price_record.product_id and price_record.product_id.commercial_name_ids:
-                commercial = None
-                for it_commercial in price_record.product_id.commercial_name_ids:
-                    if it_commercial.operative_id and price_record.operative_id:
-                        if it_commercial.operative_id.id == price_record.operative_id.id:
-                            commercial = it_commercial
-                            break
-                if commercial:
-                    result[price_record.id] = commercial.name
-                else:
-                    result[price_record.id] = ""
-        return result
-        
     _columns = {
-        'commercial_name': fields.function(_compute_commercial_name, method=True, string='Commercial Name', type='char'),
+        'ir_cron_id': fields.many2one('ir.cron', string='Cron', ondelete='cascade'),
     }
     
-    _defaults = {
-        'information_date': fields.date.context_today,
-    }
+    def create_cron(self, cr, uid, ids, context=None):
+        cron_obj = self.pool.get('ir.cron')
+        vals = {}
+        cron_obj.create(cr, uid, vals, context=context)
+    
+    def create(self, cr, uid, vals, context=None):
+        super(record_responsibility, self).create(cr, uid, vals, context=context)
+    
 
 
-price_record()
+record_responsibility()
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

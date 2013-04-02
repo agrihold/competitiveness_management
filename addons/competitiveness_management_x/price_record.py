@@ -51,6 +51,8 @@ class price_record(osv.osv):
                             break
                 if commercial:
                     result[price_record.id] = commercial.name
+                else:
+                    result[price_record.id] = ''
         return result
         
     _columns = {
