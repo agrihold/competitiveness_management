@@ -35,8 +35,27 @@ class price_record(osv.osv):
     _name = 'competitiveness_management.price_record'
     _inherit = [ _name ]
     _order = 'information_date desc'
+    
+    def _compute_commercial_name(self, cr, uid, ids, name, arg, context=None):
+        result = {}
+        if context is None:
+            context = {}
+        
+        for price_record in self.browse(cr, uid, ids, context=context):
+            commercial = None
+            for it_commercial in price_record.product_id.commercial_name_ids:
+                if it_commercial.operative_id.id == price_record.operative_id.id:
+                    commercial = it_commercial
+                    break
+            result[price_record.id] = commercial.name
+        return result
+        
+    _columns = {
+        'commercial_name': fields.function(_compute_commercial_name, method=True, string='Commercial Name', type='char'),
+    }
+    
     _defaults = {
-        'information_date': fields.date.context_today,      
+        'information_date': fields.date.context_today,
     }
 
 
