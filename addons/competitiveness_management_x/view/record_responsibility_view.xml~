@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    Agrihold Costs and Competitiveness Management
+#    Copyright (C) 2013 No author.
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- competitiveness_management.record_responsibility -->
+<!-- competitiveness_management.record_responsibility -->
+<!-- competitiveness_management.record_responsibility -->
+<openerp>
+    <data>
+        
+        <record id="view_competitiveness_management_record_responsibility_form_x" model="ir.ui.view">
+            <field name="name">competitiveness_management_x.record_responsibility.form</field>
+            <field name="model">competitiveness_management.record_responsibility</field>
+            <field name="inherit_id" ref="competitiveness_management.view_competitiveness_management_record_responsibility_form"/>
+            <field name="arch" type="xml">
+                <form string="Record Responsabilities">
+                    <field name="message_ids" colspan="4" widget="mail_thread" nolabel="1"/>
+                </form>
+            </field>
+        </record>
+        
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

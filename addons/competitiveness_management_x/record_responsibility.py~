@@ -33,13 +33,86 @@ from openerp import netsvc
 class record_responsibility(osv.osv):
     """"""
     _name = 'competitiveness_management.record_responsibility'
-    _inherit = [ _name ]
+    _inherit = [ _name, 'mail.thread']
+    
+    _rec_name = 'price_type_id'
     
     _columns = {
         'ir_cron_id': fields.many2one('ir.cron', string='Cron', ondelete='cascade'),
     }
     
-
+    def update_cron(self, cr, uid, ids, context=None):
+        cron_obj = self.pool.get('ir.cron')
+        for resp in self.browse(cr, uid, ids, context=context):
+            vals = {}
+            vals['name'] = 'Record Responsibility ' + resp.user_id.name
+            vals['user_id'] = 1
+            vals['model'] = 'competitiveness_management.record_responsibility'
+            vals['function'] = 'create_message_to_user'
+            vals['args'] = '(' + str(resp.id) + ',)'
+            vals['interval_type'] = resp.interval_type
+            vals['nextcall'] = resp.nextcall
+            vals['interval_number'] = resp.interval_number
+            vals['active'] = True
+            vals['doall'] = False
+            vals['numbercall'] = -1
+            
+            if resp.ir_cron_id:
+                cron_id = cron_obj.write(cr, uid, [resp.ir_cron_id.id], vals, context=context)
+            else:
+                cron_id = cron_obj.create(cr, uid, vals, context=context)
+                self.write(cr, uid, [resp.id], {'ir_cron_id': cron_id}, context=context)
+    
+    def update_suscription(self, cr, uid, ids, context=None):
+        if not context:
+            context = {}
+        context['update_suscription'] = True
+        user_obj = self.pool.get('res.users');
+        all_users_ids = user_obj.search(cr, uid, [], context=context)
+        self.message_unsubscribe_users(cr, uid, ids, user_ids=all_users_ids, context=context)
+        for resp in self.browse(cr, uid, ids, context=context):
+            self.message_subscribe_users(cr, uid, ids, user_ids=[resp.user_id.id], context=context)
+        
+        ret = self.message_get_subscription_data(cr, uid, ids, context=context)
+        
+    def create(self, cr, uid, vals, context=None):
+        if not context:
+            context = {}
+            
+        new_id = super(record_responsibility, self).create(cr, uid, vals, context=context)
+        self.update_cron(cr, uid, [new_id], context=context)
+        self.update_suscription(cr, uid, [new_id], context=context)
+        if not context.get('update_suscription', False):
+            self.update_suscription(cr, uid, [new_id], context=context)
+        return new_id
+        
+    def write(self, cr, uid, ids, vals, context=None):
+        if not context:
+            context = {}
+        
+        ret = super(record_responsibility, self).write(cr, uid, ids, vals, context=context)
+        if not isinstance(ids, list):
+            ids = [ids]
+        self.update_cron(cr, uid, ids, context=context)
+        if not context.get('update_suscription', False):
+            self.update_suscription(cr, uid, ids, context=context)
+        return ret
+    
+    def unlink(self, cr, uid, ids, context=None):
+        if not isinstance(ids, list):
+            ids = [ids]
+        cron_obj = self.pool.get('ir.cron')
+        for rec_res in self.browse(cr, uid, ids, context=context):
+            cron_obj.unlink(cr, uid, [rec_res.ir_cron_id.id], context=context)
+    
+    def create_message_to_user(self, cr, uid, ids=None, context=None):
+        print 'create_message_to_user'
+        if not isinstance(ids, list):
+            ids = [ids]
+        for rec_res in self.browse(cr, uid, ids, context=context):
+            subject = 'Alert to record ' + rec_res.price_type_id.name
+            body = rec_res.note
+            self.message_post(cr, uid, [rec_res.id], subject=subject, body=body, type='notification', subtype='mail.mt_comment', context=context)
 
 record_responsibility()
 
