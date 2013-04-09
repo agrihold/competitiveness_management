@@ -65,9 +65,9 @@ class record_responsibility(osv.osv):
             vals['numbercall'] = -1
             
             if resp.ir_cron_id:
-                cron_id = cron_obj.write(cr, uid, [resp.ir_cron_id.id], vals, context=context)
+                cron_id = cron_obj.write(cr, SUPERUSER_ID, [resp.ir_cron_id.id], vals, context=context)
             else:
-                cron_id = cron_obj.create(cr, uid, vals, context=context)
+                cron_id = cron_obj.create(cr, SUPERUSER_ID, vals, context=context)
                 self.write(cr, uid, [resp.id], {'ir_cron_id': cron_id}, context=context)
     
     def update_suscription(self, cr, uid, ids, context=None):
@@ -75,12 +75,10 @@ class record_responsibility(osv.osv):
             context = {}
         context['update_suscription'] = True
         user_obj = self.pool.get('res.users');
-        all_users_ids = user_obj.search(cr, uid, [], context=context)
-        self.message_unsubscribe_users(cr, uid, ids, user_ids=all_users_ids, context=context)
+        all_users_ids = user_obj.search(cr, SUPERUSER_ID, [], context=context)
+        self.message_unsubscribe_users(cr, SUPERUSER_ID, ids, user_ids=all_users_ids, context=context)
         for resp in self.browse(cr, uid, ids, context=context):
             self.message_subscribe_users(cr, uid, ids, user_ids=[resp.user_id.id], context=context)
-        
-        ret = self.message_get_subscription_data(cr, uid, ids, context=context)
         
     def create(self, cr, uid, vals, context=None):
         if not context:
@@ -110,7 +108,7 @@ class record_responsibility(osv.osv):
             ids = [ids]
         cron_obj = self.pool.get('ir.cron')
         for rec_res in self.browse(cr, uid, ids, context=context):
-            cron_obj.unlink(cr, uid, [rec_res.ir_cron_id.id], context=context)
+            cron_obj.unlink(cr, SUPERUSER_ID, [rec_res.ir_cron_id.id], context=context)
     
     def create_message_to_user(self, cr, uid, ids=None, context=None):
         if not isinstance(ids, list):
