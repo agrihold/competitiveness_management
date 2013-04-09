@@ -29,20 +29,27 @@ from openerp.tools.translate import _
 from openerp.tools import DEFAULT_SERVER_DATE_FORMAT, DEFAULT_SERVER_DATETIME_FORMAT, DATETIME_FORMATS_MAP, float_compare
 import openerp.addons.decimal_precision as dp
 from openerp import netsvc
+from openerp import SUPERUSER_ID
 
 class record_responsibility(osv.osv):
     """"""
     _name = 'competitiveness_management.record_responsibility'
     _inherit = [ _name, 'mail.thread']
     
-    _rec_name = 'price_type_id'
+    def _get_name(self, cr, uid, ids, fn, args, context=None):
+        result = dict.fromkeys(ids, False)
+        for resp in self.browse(cr, uid, ids, context=context):
+            result[resp.id] = 'Alert to record ' + resp.price_type_id.name
+        return result
     
     _columns = {
+        'name': fields.function(_get_name, string='Name', type='char', size=128),
         'ir_cron_id': fields.many2one('ir.cron', string='Cron', ondelete='cascade'),
     }
     
     def update_cron(self, cr, uid, ids, context=None):
         cron_obj = self.pool.get('ir.cron')
+        mail_group_obj = self.pool.get('mail.group')
         for resp in self.browse(cr, uid, ids, context=context):
             vals = {}
             vals['name'] = 'Record Responsibility ' + resp.user_id.name
@@ -106,13 +113,14 @@ class record_responsibility(osv.osv):
             cron_obj.unlink(cr, uid, [rec_res.ir_cron_id.id], context=context)
     
     def create_message_to_user(self, cr, uid, ids=None, context=None):
-        print 'create_message_to_user'
         if not isinstance(ids, list):
             ids = [ids]
-        for rec_res in self.browse(cr, uid, ids, context=context):
+        message_obj = self.pool.get('mail.message')
+        for rec_res in self.browse(cr, SUPERUSER_ID, ids, context=context):
+            user = rec_res.user_id
             subject = 'Alert to record ' + rec_res.price_type_id.name
             body = rec_res.note
-            self.message_post(cr, uid, [rec_res.id], subject=subject, body=body, type='notification', subtype='mail.mt_comment', context=context)
+            self.message_post(cr, SUPERUSER_ID, [rec_res.id], subject=subject, body=body, type='notification', subtype='mail.mt_comment', context=context)
 
 record_responsibility()
 
