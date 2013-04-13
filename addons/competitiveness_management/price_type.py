@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Agrihold Costs and Competitiveness Management
+#    Competitiveness Management
 #    Copyright (C) 2013 No author.
 #    No email
 #
@@ -27,11 +27,9 @@ from osv import osv, fields
 
 class price_type(osv.osv):
     """Al cargar precios se debe poder restringuir por gurpo de usuario o usuario que tipos de precios tiene permitido cargar"""
+    
     _name = 'competitiveness_management.price_type'
     _description = 'Al cargar precios se debe poder restringuir por gurpo de usuario'
-
-    _states_ = [
-    ]
 
     _columns = {
         'name': fields.char(string='Name', required=True, size=32),
@@ -43,6 +41,12 @@ class price_type(osv.osv):
 
     _defaults = {
     }
+
+
+    _constraints = [
+    ]
+
+
 
 
 price_type()

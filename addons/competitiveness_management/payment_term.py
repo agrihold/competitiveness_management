@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Agrihold Costs and Competitiveness Management
+#    Competitiveness Management
 #    Copyright (C) 2013 No author.
 #    No email
 #
@@ -27,11 +27,9 @@ from osv import osv, fields
 
 class payment_term(osv.osv):
     """"""
+    
     _name = 'competitiveness_management.payment_term'
     _description = 'payment_term'
-
-    _states_ = [
-    ]
 
     _columns = {
         'name': fields.char(string='Term', required=True, size=64),
@@ -40,6 +38,12 @@ class payment_term(osv.osv):
 
     _defaults = {
     }
+
+
+    _constraints = [
+    ]
+
+
 
 
 payment_term()

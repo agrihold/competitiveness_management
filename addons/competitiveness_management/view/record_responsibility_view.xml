@@ -2,7 +2,7 @@
 <!--
 ##############################################################################
 #
-#    Agrihold Costs and Competitiveness Management
+#    Competitiveness Management
 #    Copyright (C) 2013 No author.
 #    No email
 #
@@ -27,12 +27,16 @@
 <openerp>
     <data>
 
-        <!-- SEARCHVIEW -->
+        <!-- SEARCH VIEW -->
         <record id="view_competitiveness_management_record_responsibility_filter" model="ir.ui.view">
             <field name="name">competitiveness_management.record_responsibility.select</field>
             <field name="model">competitiveness_management.record_responsibility</field>
             <field name="arch" type="xml">
                 <search string="Record Responsabilities" version="7.0">
+                    <group string="By Attribute">
+                    </group>
+                    <group string="By object">
+                    </group>
                 </search>
             </field>
         </record>

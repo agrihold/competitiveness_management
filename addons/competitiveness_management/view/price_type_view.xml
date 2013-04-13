@@ -2,7 +2,7 @@
 <!--
 ##############################################################################
 #
-#    Agrihold Costs and Competitiveness Management
+#    Competitiveness Management
 #    Copyright (C) 2013 No author.
 #    No email
 #
@@ -27,16 +27,20 @@
 <openerp>
     <data>
 
-        <!-- SEARCHVIEW -->
+        <!-- SEARCH VIEW -->
         <record id="view_competitiveness_management_price_type_filter" model="ir.ui.view">
             <field name="name">competitiveness_management.price_type.select</field>
             <field name="model">competitiveness_management.price_type</field>
             <field name="arch" type="xml">
                 <search string="Price Types" version="7.0">
-                        <field name="name"
+                    <group string="By Attribute">
+                    <field name="name" string="Name"
                             />
-                        <field name="code"
+                    <field name="code" string="Code"
                             />
+                    </group>
+                    <group string="By object">
+                    </group>
                 </search>
             </field>
         </record>

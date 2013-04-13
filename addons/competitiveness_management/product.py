@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Agrihold Costs and Competitiveness Management
+#    Competitiveness Management
 #    Copyright (C) 2013 No author.
 #    No email
 #
@@ -27,12 +27,10 @@ from osv import osv, fields
 
 class product(osv.osv):
     """"""
+    
     _name = 'product.product'
     _inherits = {  }
     _inherit = [ 'product.product' ]
-
-    _states_ = [
-    ]
 
     _columns = {
         'commercial_name_ids': fields.one2many('competitiveness_management.commercial_name', 'product_id', string='Commercial Names'), 
@@ -40,6 +38,12 @@ class product(osv.osv):
 
     _defaults = {
     }
+
+
+    _constraints = [
+    ]
+
+
 
 
 product()

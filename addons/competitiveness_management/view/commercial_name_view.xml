@@ -2,7 +2,7 @@
 <!--
 ##############################################################################
 #
-#    Agrihold Costs and Competitiveness Management
+#    Competitiveness Management
 #    Copyright (C) 2013 No author.
 #    No email
 #
@@ -27,16 +27,20 @@
 <openerp>
     <data>
 
-        <!-- SEARCHVIEW -->
+        <!-- SEARCH VIEW -->
         <record id="view_competitiveness_management_commercial_name_filter" model="ir.ui.view">
             <field name="name">competitiveness_management.commercial_name.select</field>
             <field name="model">competitiveness_management.commercial_name</field>
             <field name="arch" type="xml">
                 <search string="Commercial Names" version="7.0">
-                        <field name="operative_id"
+                    <group string="By Attribute">
+                    <field name="operative_id" string="Operative"
                             />
-                        <field name="name"
+                    <field name="name" string="Name"
                             />
+                    </group>
+                    <group string="By object">
+                    </group>
                 </search>
             </field>
         </record>
