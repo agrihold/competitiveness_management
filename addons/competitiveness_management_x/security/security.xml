@@ -44,6 +44,17 @@
         <field name="perm_create" eval='True'/>
         <field name="perm_unlink" eval='True'/>          
     </record>       
+    
+    <record model="ir.rule" id="price_record_manager_rule">
+        <field name="name" >Price Record Manger Price types edit</field>
+        <field name="model_id" ref="competitiveness_management.model_competitiveness_management_price_record"/>
+        <field name="groups" eval="[(4,ref('competitiveness_management.group_manager'))]"/>        
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="perm_read" eval='False'/>
+        <field name="perm_write" eval='True'/>
+        <field name="perm_create" eval='True'/>
+        <field name="perm_unlink" eval='True'/>          
+    </record>    
 
     </data>
 </openerp>
