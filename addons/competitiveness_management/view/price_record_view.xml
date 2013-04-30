@@ -2,7 +2,7 @@
 <!--
 ##############################################################################
 #
-#    Agrihold Costs and Competitiveness Management
+#    Competitiveness Management
 #    Copyright (C) 2013 No author.
 #    No email
 #
@@ -27,34 +27,38 @@
 <openerp>
     <data>
 
-        <!-- SEARCHVIEW -->
+        <!-- SEARCH VIEW -->
         <record id="view_competitiveness_management_price_record_filter" model="ir.ui.view">
             <field name="name">competitiveness_management.price_record.select</field>
             <field name="model">competitiveness_management.price_record</field>
             <field name="arch" type="xml">
                 <search string="Price Records" version="7.0">
-                        <field name="product_id"
+                    <group string="By Attribute">
+                    <field name="product_id" string="Product"
                             />
-                        <field name="commercial_name"
+                    <field name="commercial_name" string="Commercial Name"
                             />
-                        <field name="information_date"
+                    <field name="information_date" string="Price Date"
                             />
-                        <field name="usd_price"
+                    <field name="usd_price" string="Price (USD)"
                             />
-                        <field name="operative_id"
+                    <field name="operative_id" string="Operative"
                             />
-                        <field name="supplier"
+                    <field name="supplier" string="Supplier"
                             />
-                        <field name="invoice_number"
+                    <field name="invoice_number" string="Invoice Number"
                             />
-                        <field name="user"
+                    <field name="user" string="User"
                             />
-                        <field name="record_date"
+                    <field name="record_date" string="Recorded"
                             />
-                        <field name="price_type_id"
+                    </group>
+                    <group string="By object">
+                    <field name="price_type_id" string="Price Type"
                             />
-                        <field name="price_term_id"
+                    <field name="price_term_id" string="Term"
                             />
+                    </group>
                 </search>
             </field>
         </record>

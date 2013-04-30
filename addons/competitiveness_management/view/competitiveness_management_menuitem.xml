@@ -2,7 +2,7 @@
 <!--
 ##############################################################################
 #
-#    Agrihold Costs and Competitiveness Management
+#    Competitiveness Management
 #    Copyright (C) 2013 No author.
 #    No email
 #
@@ -47,7 +47,7 @@
             id="menu_configuration"
             sequence="100"
             parent="menu_price_management"
-            groups="group_manager,group_manager,group_view"
+            groups="group_manager,group_manager"
             />
 
         <record id="action_competitiveness_management_payment_term_payment_terms" model="ir.actions.act_window">
@@ -57,6 +57,7 @@
             <field name="view_mode">tree,form</field>
             <field name="view_id" ref="view_competitiveness_management_payment_term_tree"/>
             <field name="search_view_id" ref="view_competitiveness_management_payment_term_filter"/>
+            <field name="domain">[]</field>
         </record>
 
         <menuitem
@@ -65,7 +66,7 @@
             sequence="100"
             action="action_competitiveness_management_payment_term_payment_terms"
             parent="menu_configuration"
-            groups="group_manager,group_manager,group_view"
+            groups="group_manager,group_manager"
             />
 
         <record id="action_competitiveness_management_price_record_price_records" model="ir.actions.act_window">
@@ -75,6 +76,7 @@
             <field name="view_mode">tree,form</field>
             <field name="view_id" ref="view_competitiveness_management_price_record_tree"/>
             <field name="search_view_id" ref="view_competitiveness_management_price_record_filter"/>
+            <field name="domain">[]</field>
         </record>
 
         <menuitem
@@ -93,6 +95,7 @@
             <field name="view_mode">tree,form</field>
             <field name="view_id" ref="view_competitiveness_management_price_type_tree"/>
             <field name="search_view_id" ref="view_competitiveness_management_price_type_filter"/>
+            <field name="domain">[]</field>
         </record>
 
         <menuitem
@@ -101,7 +104,7 @@
             sequence="100"
             action="action_competitiveness_management_price_type_price_types"
             parent="menu_configuration"
-            groups="group_manager,group_manager,group_view"
+            groups="group_manager,group_manager"
             />
 
         <record id="action_competitiveness_management_record_responsibility_responsabilities" model="ir.actions.act_window">
@@ -111,6 +114,7 @@
             <field name="view_mode">tree,form</field>
             <field name="view_id" ref="view_competitiveness_management_record_responsibility_tree"/>
             <field name="search_view_id" ref="view_competitiveness_management_record_responsibility_filter"/>
+            <field name="domain">[]</field>
         </record>
 
         <menuitem
@@ -119,7 +123,7 @@
             sequence="100"
             action="action_competitiveness_management_record_responsibility_responsabilities"
             parent="menu_configuration"
-            groups="group_manager,group_manager,group_view"
+            groups="group_manager,group_manager"
             />
 
     </data>

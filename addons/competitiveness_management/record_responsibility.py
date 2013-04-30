@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Agrihold Costs and Competitiveness Management
+#    Competitiveness Management
 #    Copyright (C) 2013 No author.
 #    No email
 #
@@ -27,11 +27,9 @@ from osv import osv, fields
 
 class record_responsibility(osv.osv):
     """"""
+    
     _name = 'competitiveness_management.record_responsibility'
     _description = 'record_responsibility'
-
-    _states_ = [
-    ]
 
     _columns = {
         'user_id': fields.many2one('res.users', string='User', required=True),
@@ -44,6 +42,12 @@ class record_responsibility(osv.osv):
 
     _defaults = {
     }
+
+
+    _constraints = [
+    ]
+
+
 
 
 record_responsibility()

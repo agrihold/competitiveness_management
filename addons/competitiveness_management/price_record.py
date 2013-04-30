@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Agrihold Costs and Competitiveness Management
+#    Competitiveness Management
 #    Copyright (C) 2013 No author.
 #    No email
 #
@@ -27,11 +27,9 @@ from osv import osv, fields
 
 class price_record(osv.osv):
     """"""
+    
     _name = 'competitiveness_management.price_record'
     _description = 'price_record'
-
-    _states_ = [
-    ]
 
     _columns = {
         'product_id': fields.many2one('product.product', string='Product', required=True, context={'default_function_type':'formulated'}, domain=[('function_type','=','formulated')]),
@@ -50,6 +48,12 @@ class price_record(osv.osv):
     _defaults = {
         'operative_id': lambda s,cr,uid,c: s.pool.get('res.company')._company_default_get(cr, uid, 'sgr.package_file', context=c),
     }
+
+
+    _constraints = [
+    ]
+
+
 
 
 price_record()

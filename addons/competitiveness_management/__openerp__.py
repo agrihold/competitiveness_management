@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Agrihold Costs and Competitiveness Management
+#    Competitiveness Management
 #    Copyright (C) 2013 No author.
 #    No email
 #
@@ -30,7 +30,7 @@
     'init_xml': [],
     'installable': True,
     'license': 'AGPL-3',
-    'name': u'Agrihold Costs and Competitiveness Management',
+    'name': u'Competitiveness Management',
     'test': [],
     'update_xml': [   u'security/competitiveness_management_group.xml',
                       u'view/product_view.xml',
@@ -46,6 +46,12 @@
                       u'data/price_type_properties.xml',
                       u'data/record_responsibility_properties.xml',
                       u'data/price_record_properties.xml',
+                      u'data/product_track.xml',
+                      u'data/commercial_name_track.xml',
+                      u'data/payment_term_track.xml',
+                      u'data/price_type_track.xml',
+                      u'data/record_responsibility_track.xml',
+                      u'data/price_record_track.xml',
                       'security/ir.model.access.csv'],
     'version': 'No version',
     'website': ''}

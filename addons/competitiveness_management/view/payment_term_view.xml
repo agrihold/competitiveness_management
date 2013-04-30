@@ -2,7 +2,7 @@
 <!--
 ##############################################################################
 #
-#    Agrihold Costs and Competitiveness Management
+#    Competitiveness Management
 #    Copyright (C) 2013 No author.
 #    No email
 #
@@ -27,14 +27,18 @@
 <openerp>
     <data>
 
-        <!-- SEARCHVIEW -->
+        <!-- SEARCH VIEW -->
         <record id="view_competitiveness_management_payment_term_filter" model="ir.ui.view">
             <field name="name">competitiveness_management.payment_term.select</field>
             <field name="model">competitiveness_management.payment_term</field>
             <field name="arch" type="xml">
                 <search string="Payment Terms" version="7.0">
-                        <field name="name"
+                    <group string="By Attribute">
+                    <field name="name" string="Term"
                             />
+                    </group>
+                    <group string="By object">
+                    </group>
                 </search>
             </field>
         </record>
