@@ -60,7 +60,7 @@
 			</model>
 		</userDefined>
 </profile>
-<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Tue Mar 19 14:29:23 BRT 2013'>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Wed Mar 20 19:02:21 BRT 2013'>
   <XMI.header>    <XMI.documentation>
       <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
       <XMI.exporterVersion>0.34(6) revised on $Date: 2010-01-11 22:20:14 +0100 (Mon, 11 Jan 2010) $ </XMI.exporterVersion>
@@ -2635,8 +2635,8 @@
       >&lt;&lt;menu&gt;&gt;</text>
     </group>
     <rectangle name="Fig9.3"
-      x="170"
-      y="-94"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -2646,7 +2646,7 @@
       visibility="0"
     />
     <group name="Fig9.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[170, -94, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="-64--88-56-1-13b933e0:13caa54d949:-8000:0000000000000C2D"
          fill="1"
          fillcolor="white"
@@ -2658,8 +2658,8 @@
       </private>
       
       <rectangle name="Fig9.4.0"
-        x="170"
-        y="-94"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -3535,8 +3535,8 @@
       >&lt;&lt;menu&gt;&gt;</text>
     </group>
     <rectangle name="Fig18.3"
-      x="98"
-      y="-14"
+      x="10"
+      y="10"
       width="11"
       height="1"
       fill="1"
@@ -3546,7 +3546,7 @@
       visibility="0"
     />
     <group name="Fig18.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[98, -14, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
          href="127-0-1-1-361a4d4d:13d4bd4a817:-8000:00000000000014D7"
          fill="1"
          fillcolor="white"
@@ -3558,8 +3558,8 @@
       </private>
       
       <rectangle name="Fig18.4.0"
-        x="98"
-        y="-14"
+        x="10"
+        y="10"
         width="64"
         height="19"
         fill="0"
@@ -4213,7 +4213,7 @@
       justification="Center"
     >product</text>
     <group name="Fig26.2"
-         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[1377, 889, 207, 0]"
+         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[1377, 889, 256, 0]"
          href="127-0-1-1-5ad54636:13d7e1e02a4:-8000:0000000000002937"
          fill="0"
          fillcolor="white"
@@ -4227,7 +4227,7 @@
       <rectangle name="Fig26.2.0"
         x="1377"
         y="889"
-        width="207"
+        width="256"
         height="0"
         fill="0"
         fillcolor="white"
