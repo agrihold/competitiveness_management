@@ -43,7 +43,7 @@ class price_record(osv.osv):
         
         for price_record in self.browse(cr, uid, ids, context=context):
             if price_record.product_id and price_record.product_id.commercial_name_ids:
-                commercial = None
+                commercial = False
                 for it_commercial in price_record.product_id.commercial_name_ids:
                     if it_commercial.operative_id and price_record.operative_id:
                         if it_commercial.operative_id.id == price_record.operative_id.id:
@@ -52,7 +52,9 @@ class price_record(osv.osv):
                 if commercial:
                     result[price_record.id] = commercial.name
                 else:
-                    result[price_record.id] = ""
+                    result[price_record.id] = False
+            else:
+                result[price_record.id] = False
         return result
         
     _columns = {
