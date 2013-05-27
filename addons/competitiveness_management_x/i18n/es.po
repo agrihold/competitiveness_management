@@ -1,13 +1,13 @@
 # Translation of OpenERP Server.
 # This file contains the translation of the following modules:
-#
+#	* competitiveness_management_x
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenERP Server 7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-05 18:12+0000\n"
-"PO-Revision-Date: 2013-04-05 18:12+0000\n"
+"POT-Creation-Date: 2013-05-27 16:30+0000\n"
+"PO-Revision-Date: 2013-05-27 16:30+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -65,6 +65,11 @@ msgstr "Es un seguidor"
 #: view:product.product:0
 msgid "Commercial Names"
 msgstr "Nombres comerciales"
+
+#. module: competitiveness_management_x
+#: field:competitiveness_management.record_responsibility,name:0
+msgid "Name"
+msgstr "Nombre"
 
 #. module: competitiveness_management_x
 #: model:ir.model,name:competitiveness_management_x.model_competitiveness_management_record_responsibility
