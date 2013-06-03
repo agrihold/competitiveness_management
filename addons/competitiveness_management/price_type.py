@@ -22,8 +22,8 @@
 
 
 import re
-import netsvc
-from osv import osv, fields
+from openerp import netsvc
+from openerp.osv import osv, fields
 
 class price_type(osv.osv):
     """Al cargar precios se debe poder restringuir por gurpo de usuario o usuario que tipos de precios tiene permitido cargar"""

@@ -26,7 +26,7 @@
       <fontname>Dialog</fontname>
       <fontsize>12</fontsize>
       <defaultstereotypeview>0</defaultstereotypeview>
-      <activediagram>Diagrama de caso de uso</activediagram>
+      <activediagram>Diagrama de clase</activediagram>
     </settings>
     <searchpath href="PROJECT_DIR" />
     <members>
@@ -60,7 +60,7 @@
 			</model>
 		</userDefined>
 </profile>
-<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Sat Apr 13 18:42:15 BRT 2013'>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Sun Jun 02 13:42:04 ART 2013'>
   <XMI.header>    <XMI.documentation>
       <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
       <XMI.exporterVersion>0.34(6) revised on $Date: 2010-01-11 22:20:14 +0100 (Mon, 11 Jan 2010) $ </XMI.exporterVersion>
@@ -1011,13 +1011,6 @@
                 <UML:Generalization xmi.idref = '127-0-1-1-361a4d4d:13d4bd4a817:-8000:00000000000014A9'/>
               </UML:GeneralizableElement.generalization>
             </UML:Actor>
-            <UML:UseCase xmi.id = '127-0-1-1-361a4d4d:13d4bd4a817:-8000:00000000000014DE'
-              name = 'Responsabilities' isSpecification = 'false' isRoot = 'false' isLeaf = 'false'
-              isAbstract = 'false'>
-              <UML:ModelElement.stereotype>
-                <UML:Stereotype href = 'http://argouml.org/user-profiles/OpenObjectStadardElements.xmi#127-0-1-1-5ee79c33:13bb911d610:-8000:0000000000000F9E'/>
-              </UML:ModelElement.stereotype>
-            </UML:UseCase>
             <UML:Association xmi.id = '127-0-1-1-361a4d4d:13d4bd4a817:-8000:00000000000014E5'
               name = '' isSpecification = 'false' isRoot = 'false' isLeaf = 'false' isAbstract = 'false'>
               <UML:Association.connection>
@@ -1317,6 +1310,13 @@
                 </UML:Attribute>
               </UML:Classifier.feature>
             </UML:Class>
+            <UML:UseCase xmi.id = '127-0-1-1-361a4d4d:13d4bd4a817:-8000:00000000000014DE'
+              name = 'Alerts' isSpecification = 'false' isRoot = 'false' isLeaf = 'false'
+              isAbstract = 'false'>
+              <UML:ModelElement.stereotype>
+                <UML:Stereotype href = 'http://argouml.org/user-profiles/OpenObjectStadardElements.xmi#127-0-1-1-5ee79c33:13bb911d610:-8000:0000000000000F9E'/>
+              </UML:ModelElement.stereotype>
+            </UML:UseCase>
           </UML:Namespace.ownedElement>
         </UML:Package>
         <UML:TagDefinition xmi.id = '-64--88-56-1-13b933e0:13caa54d949:-8000:0000000000000BF1'
@@ -3235,7 +3235,7 @@
     </group>
   </group>
   <group name="Fig15"
-       description="org.argouml.uml.diagram.use_case.ui.FigUseCase[552, 784, 342, 104]pathVisible=true;stereotypeView=0;extensionPointVisible=false"
+       description="org.argouml.uml.diagram.use_case.ui.FigUseCase[560, 784, 342, 104]pathVisible=true;stereotypeView=0;extensionPointVisible=false"
        href="127-0-1-1-361a4d4d:13d4bd4a817:-8000:00000000000014DE"
        fill="1"
        fillcolor="white"
@@ -3246,7 +3246,7 @@
     </private>
     
     <ellipse name="Fig15.0"
-      x="723"
+      x="731"
       y="836"
       rx="171"
       ry="52"
@@ -3256,9 +3256,9 @@
       strokecolor="black"
     />
     <text name="Fig15.1"
-      x="568"
+      x="609"
       y="815"
-      width="309"
+      width="243"
       height="41"
       fill="0"
       fillcolor="white"
@@ -3270,9 +3270,9 @@
       bold="false"
       textsize="12"
       justification="Center"
-    >competitiveness_management::Responsabilities</text>
+    >competitiveness_management::Alerts</text>
     <group name="Fig15.2"
-         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[568, 815, 309, 19]"
+         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[609, 815, 243, 19]"
          href="127-0-1-1-361a4d4d:13d4bd4a817:-8000:00000000000014DE"
          fill="0"
          fillcolor="white"
@@ -3283,9 +3283,9 @@
       </private>
       
       <rectangle name="Fig15.2.0"
-        x="568"
+        x="609"
         y="815"
-        width="309"
+        width="243"
         height="19"
         fill="0"
         fillcolor="white"
@@ -3293,9 +3293,9 @@
         strokecolor="black"
       />
       <text name="Fig15.2.1"
-        x="568"
+        x="609"
         y="815"
-        width="309"
+        width="243"
         height="17"
         fill="0"
         fillcolor="white"
@@ -3310,7 +3310,7 @@
       >&lt;&lt;menu&gt;&gt;</text>
     </group>
     <rectangle name="Fig15.3"
-      x="10"
+      x="18"
       y="10"
       width="11"
       height="1"
@@ -3321,7 +3321,7 @@
       visibility="0"
     />
     <group name="Fig15.4"
-         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[10, 10, 64, 19]"
+         description="org.argouml.uml.diagram.ui.FigExtensionPointsCompartment[18, 10, 64, 19]"
          href="127-0-1-1-361a4d4d:13d4bd4a817:-8000:00000000000014DE"
          fill="1"
          fillcolor="white"
@@ -3333,7 +3333,7 @@
       </private>
       
       <rectangle name="Fig15.4.0"
-        x="10"
+        x="18"
         y="10"
         width="64"
         height="19"
@@ -3396,9 +3396,9 @@
       stroke="1"
       strokecolor="black"
     >
-      <moveto x="1378"
+      <moveto x="1379"
               y="338" />
-      <lineto x="786"
+      <lineto x="793"
               y="787" />
     </path>
   </group>
@@ -3455,7 +3455,7 @@
     >
       <moveto x="722"
               y="748" />
-      <lineto x="722"
+      <lineto x="725"
               y="784" />
     </path>
   </group>
@@ -5653,9 +5653,9 @@
       strokecolor="black"
     />
     <text name="Fig12.1"
-      x="915"
+      x="929"
       y="468"
-      width="110"
+      width="81"
       height="41"
       fill="0"
       fillcolor="white"
@@ -5667,9 +5667,9 @@
       bold="false"
       textsize="12"
       justification="Center"
-    >Responsabilities</text>
+    >Alerts</text>
     <group name="Fig12.2"
-         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[915, 468, 110, 19]"
+         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[929, 468, 81, 19]"
          href="127-0-1-1-361a4d4d:13d4bd4a817:-8000:00000000000014DE"
          fill="0"
          fillcolor="white"
@@ -5680,9 +5680,9 @@
       </private>
       
       <rectangle name="Fig12.2.0"
-        x="915"
+        x="929"
         y="468"
-        width="110"
+        width="81"
         height="19"
         fill="0"
         fillcolor="white"
@@ -5690,9 +5690,9 @@
         strokecolor="black"
       />
       <text name="Fig12.2.1"
-        x="915"
+        x="929"
         y="468"
-        width="110"
+        width="81"
         height="17"
         fill="0"
         fillcolor="white"
