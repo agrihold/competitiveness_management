@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    
+#    Competitiveness Management
 #    Copyright (C) 2013 No author.
 #    No email
 #
@@ -20,9 +20,7 @@
 #
 ##############################################################################
 
-import price_record
-import users
-import report
-import price_type
-import record_responsibility
+import competitiveness_management
+
+
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

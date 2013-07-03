@@ -37,6 +37,7 @@
     'data': [   'security/ejemplo_group.xml',
                 'security/ir.model.access.csv',
                 'report/price_analysis.xml',
+                'report/competitiveness_management.xml',
 ],
     'version': 'No version',
    # 'auto_install': False,

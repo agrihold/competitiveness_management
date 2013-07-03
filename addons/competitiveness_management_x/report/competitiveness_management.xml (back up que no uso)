@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+
+        <record id="view_report_comp_mana_price_record_tree" model="ir.ui.view">
+            <field name="name">Comp. Manag. Price Record Tree</field>
+            <field name="model">competitiveness_management.price_record.report</field>
+            <field name="arch" type="xml">
+                <tree string="Projects by Agronomic Class" create="false">
+                    <field name="product_id"/>
+<!--                    <field name="commercial_name"/>-->
+                    <field name="information_date"/>
+                    <field name="usd_price"/>
+                    <field name="price_type_id"/>                        
+                    <field name="operative_id"/>
+                    <field name="price_term_id"/>                        
+                    <field name="supplier"/>
+                    <field name="invoice_number"/>
+                </tree>
+            </field>
+        </record>
+
+
+<!--
+        <record id="view_report_sagi_npp_filter" model="ir.ui.view">
+            <field name="name">sagi.npp.report.select</field>
+            <field name="model">sagi.new_product_project.report</field>
+            <field name="arch" type="xml">
+                <search string="Projects by Agronomic Class">
+                    <group expand="0" string="Extended Filters...">
+                        <field name="product_id" string="Product"/>
+                        <field name="information_date" string="Price Date"/>
+                        <field name="usd_price" string="Price (USD)"/>
+                        <field name="operative_id" string="Operative"/>
+                        <field name="supplier" string="Supplier"/>
+                        <field name="invoice_number" string="Invoice Number"/>
+                        <field name="user" string="User"/>
+                        <field name="record_date" string="Recorded"/>
+                    </group>
+                    <group expand="1" string="Group By...">
+                        <filter string="Price Type" context="{'group_by':'price_type_id'}"/>
+                        <filter string="Supplier" context="{'group_by':'supplier'}"/>
+                        <filter string="Product" context="{'group_by':'product_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+-->
+       <menuitem name="Price Management" id="menu_comp_mana"
+            parent="base.menu_reporting" sequence="1"/>
+
+<!-- -->
+
+        <record id="view_report_comp_mana_price_record_graph" model="ir.ui.view">
+            <field name="name">sagi.npp.report.graph</field>
+            <field name="model">competitiveness_management.price_record.report</field>
+            <field name="arch" type="xml">
+                <graph orientation="vertical" string="Projects by Agronomic Class" type="line">
+                    <field name="information_date" />
+                    <field name="usd_price" operator="+"/>                
+                    <field name="price_type_id" group="True" />
+                </graph>
+            </field>
+        </record>
+
+        <record id="action_report_comp_mana_price_record" model="ir.actions.act_window">
+            <field name="name">Projects by Agronomic Class</field>
+            <field name="res_model">competitiveness_management.price_record.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,graph</field>
+            <field name="context">{}</field>
+            <field name="view_id" ref="view_report_comp_mana_price_record_graph"/>
+            <field name="help"></field>
+        </record>
+
+      <menuitem name="Analisis" id="menu_report_comp_mana_price_record"
+            parent="menu_comp_mana" action="action_report_comp_mana_price_record" sequence="10"/>
+
+<!-- Development Analysis 
+
+        <record id="view_report_sagi_npp_dev_analysis_graph" model="ir.ui.view">
+             <field name="name">sagi.npp.report.graph</field>
+            <field name="model">sagi.new_product_project.report</field>
+            <field name="arch" type="xml">
+                <graph orientation="vertical" string="Development Analysis" type="pie">
+                    <field name="operative_id" />
+                    <field name="nbr" operator="+"/>                
+                </graph>
+            </field>
+        </record>
+
+        <record id="action_report_sagi_npp_dev_analysis" model="ir.actions.act_window">
+            <field name="name">Development Analysis</field>
+            <field name="res_model">sagi.new_product_project.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,graph</field>
+            <field name="context">{'search_default_on_going':1}</field>
+            <field name="view_id" ref="view_report_sagi_npp_dev_analysis_graph"/>
+            <field name="help"></field>
+        </record>
+
+      <menuitem name="Development Analysis" id="menu_report_sagi_npp_dev_analysis"
+            parent="menu_sagi_npp" action="action_report_sagi_npp_dev_analysis" sequence="20"/>
+-->
+
+    </data>
+</openerp>

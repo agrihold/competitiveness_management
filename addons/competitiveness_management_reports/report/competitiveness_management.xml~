@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+       <menuitem name="Price Management" id="menu_comp_mana"
+            parent="base.menu_reporting" sequence="1"/>
+
+<!-- -->
+        <record id="view_report_prices_by_type_filter" model="ir.ui.view">
+            <field name="name">Prices by Type</field>
+            <field name="model">competitiveness_management.price_record</field>
+            <field name="arch" type="xml">
+                <search string="Price Records" version="7.0">
+                    <group string="By Attribute">
+                        <field name="product_id" string="Product"/>
+                        <field name="commercial_name" string="Commercial Name"/>
+                        <field name="operative_id" string="Operative"/>
+                    </group>
+                    <group string="By object">
+                        <field name="price_type_id" string="Price Type"/>
+                        <field name="information_date_from" filter_domain="[('information_date','&gt;=',self)]"/>
+                        <field name="information_date_to" filter_domain="[('information_date','&lt;=',self)]"/>
+                    </group>
+                </search>
+            </field>
+        </record> 
+
+        <record id="view_report_prices_by_type_graph" model="ir.ui.view">
+            <field name="name">Prices by Type</field>
+            <field name="model">competitiveness_management.price_record</field>
+            <field name="arch" type="xml">
+                <graph orientation="vertical" string="Prices by Type" type="line">
+                    <field name="information_date" />
+                    <field name="usd_price" operator="+"/>                
+                    <field name="price_type_id" group="True" />
+                </graph>
+            </field>
+        </record>
+
+        <record id="action_report_prices_by_type" model="ir.actions.act_window">
+            <field name="name">Price Evolution by Type</field>
+            <field name="res_model">competitiveness_management.price_record</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">graph,tree</field>
+            <field name="context">{}</field>
+            <field name="view_id" ref="view_report_prices_by_type_graph"/>
+            <field name="search_view_id" ref="view_report_prices_by_type_filter"/>
+            <field name="auto_search">False</field>
+            <field name="help">Debe seleccionar un producto</field>
+        </record>
+
+      <menuitem name="Prices by Type" id="menu_report_prices_by_type"
+            parent="menu_comp_mana" action="action_report_prices_by_type" sequence="20"/>
+
+<!-- -->
+
+        <record id="view_report_prices_by_product_filter" model="ir.ui.view">
+            <field name="name">Prices by Product</field>
+            <field name="model">competitiveness_management.price_record</field>
+            <field name="arch" type="xml">
+                <search string="Price Records" version="7.0">
+                    <group string="By Attribute">
+                        <field name="product_id" string="Product"/>
+                        <field name="commercial_name" string="Commercial Name"/>
+                        <field name="operative_id" string="Operative"/>
+                    </group>
+                    <group string="By object">
+                        <field name="price_type_id" string="Price Type"/>
+                        <field name="information_date_from" filter_domain="[('information_date','&gt;=',self)]"/>
+                        <field name="information_date_to" filter_domain="[('information_date','&lt;=',self)]"/>
+                    </group>
+                </search>
+            </field>
+        </record> 
+
+        <record id="view_report_prices_by_product_graph" model="ir.ui.view">
+            <field name="name">Prices by Product</field>
+            <field name="model">competitiveness_management.price_record</field>
+            <field name="arch" type="xml">
+                <graph orientation="vertical" string="Prices by Product" type="line">
+                    <field name="information_date" />
+                    <field name="usd_price" operator="+"/>                
+                    <field name="product_id" group="True" />
+                </graph>
+            </field>
+        </record>
+
+        <record id="action_report_prices_by_product" model="ir.actions.act_window">
+            <field name="name">Price Evolution by Product</field>
+            <field name="res_model">competitiveness_management.price_record</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">graph,tree</field>
+            <field name="context">{}</field>
+            <field name="view_id" ref="view_report_prices_by_product_graph"/>
+            <field name="search_view_id" ref="view_report_prices_by_product_filter"/>
+            <field name="auto_search">False</field>
+            <field name="help">Debe seleccionar un producto</field>
+        </record>
+
+      <menuitem name="Prices by Product" id="menu_report_prices_by_product"
+            parent="menu_comp_mana" action="action_report_prices_by_product" sequence="30"/>
+
+<!-- -->
+        <record id="view_report_prices_analysis_tree" model="ir.ui.view">
+            <field name="name">competitiveness_management.price_record.tree</field>
+            <field name="model">competitiveness_management.price_record</field>
+            <field name="arch" type="xml">
+                <tree string="Price Analysis">
+                    <field name="product_id"/>
+                    <field name="commercial_name"/>
+                    <field name="information_date"/>
+                    <field name="usd_price"/>
+                    <field name="price_type_id"/>                        
+                    <field name="operative_id"/>
+                    <field name="price_term_id"/>
+                    <field name="supplier"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_report_prices_analysis" model="ir.actions.act_window">
+            <field name="name">Price Analysis</field>
+            <field name="res_model">competitiveness_management.price_record</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,graph</field>
+            <field name="context">{}</field>
+            <field name="view_id" ref="view_report_prices_analysis_tree"/>
+            <field name="search_view_id" ref="competitiveness_management.view_competitiveness_management_price_record_filter"/>
+            <field name="help"></field>
+        </record>
+
+      <menuitem name="Prices Analysis" id="menu_report_prices_analysis"
+            parent="menu_comp_mana" action="action_report_prices_analysis" sequence="10"/>
+
+
+<!-- Development Analysis 
+
+        <record id="view_report_sagi_npp_dev_analysis_graph" model="ir.ui.view">
+             <field name="name">sagi.npp.report.graph</field>
+            <field name="model">sagi.new_product_project.report</field>
+            <field name="arch" type="xml">
+                <graph orientation="vertical" string="Development Analysis" type="pie">
+                    <field name="operative_id" />
+                    <field name="nbr" operator="+"/>                
+                </graph>
+            </field>
+        </record>
+
+        <record id="action_report_sagi_npp_dev_analysis" model="ir.actions.act_window">
+            <field name="name">Development Analysis</field>
+            <field name="res_model">sagi.new_product_project.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,graph</field>
+            <field name="context">{'search_default_on_going':1}</field>
+            <field name="view_id" ref="view_report_sagi_npp_dev_analysis_graph"/>
+            <field name="help"></field>
+        </record>
+
+      <menuitem name="Development Analysis" id="menu_report_sagi_npp_dev_analysis"
+            parent="menu_sagi_npp" action="action_report_sagi_npp_dev_analysis" sequence="20"/>
+-->
+
+    </data>
+</openerp>

@@ -24,7 +24,7 @@
 {   'active': False,
     'author': 'No author.',
     'category': 'base.module_category_hidden',
-    'depends': ['competitiveness_management_x','report_aeroo'],
+    'depends': ['competitiveness_management_x','report_aeroo_ooo'],
     'description': 'Competitiveness Management Reports',
     'init_xml': [],
     'installable': True,

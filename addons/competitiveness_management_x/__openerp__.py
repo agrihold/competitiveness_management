@@ -41,6 +41,7 @@
                 'view/product_view.xml',
                 'view/price_type_view.xml',
                 'data/price_type_date.xml',
+#                'report/competitiveness_management.xml',
                 'view/record_responsibility_view.xml',],
     'version': 'No version',
    # 'auto_install': False,

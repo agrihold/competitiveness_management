@@ -104,9 +104,12 @@
                 <data>
                     <field name="price_type_id" position="after">
                         <group expand="0" string="Group by...">
+                            <field name="information_date_from" filter_domain="[('information_date','&gt;=',self)]"/>
+                            <field name="information_date_to" filter_domain="[('information_date','&lt;=',self)]"/>
                             <filter string="Price Type" context="{'group_by':'price_type_id'}"/>
                             <filter string="Supplier" context="{'group_by':'supplier'}"/>
                             <filter string="Product" context="{'group_by':'product_id'}"/>
+                            <filter string="Operative" context="{'group_by':'operative_id'}"/>
                         </group>
                     </field>
                 </data>
