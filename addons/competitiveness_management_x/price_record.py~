@@ -59,7 +59,11 @@ class price_record(osv.osv):
         
     _columns = {
         'commercial_name': fields.function(_compute_commercial_name, method=True, string='Commercial Name', type='char'),
+        'information_date_from':fields.function(lambda *a,**k:{}, method=True, type='date',string="Price date from"),
+        'information_date_to':fields.function(lambda *a,**k:{}, method=True, type='date',string="Price date to"), 
     }
+
+    _order = 'information_date'
     
     _defaults = {
         'information_date': fields.date.context_today,
