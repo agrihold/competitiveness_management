@@ -33,6 +33,7 @@ class product(osv.osv):
     _inherit = [ 'product.product' ]
 
     _columns = {
+        'use_in_price_management': fields.boolean(string='Use in Price Management'),
         'commercial_name_ids': fields.one2many('competitiveness_management.commercial_name', 'product_id', string='Commercial Names'), 
     }
 

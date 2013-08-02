@@ -45,7 +45,7 @@
             <field name="context">{}</field>
             <field name="view_id" ref="view_report_prices_by_type_graph"/>
             <field name="search_view_id" ref="view_report_prices_by_type_filter"/>
-            <field name="auto_search">False</field>
+            <field name="auto_search" eval="False"/>
             <field name="help">Debe seleccionar un producto</field>
         </record>
 
@@ -93,7 +93,7 @@
             <field name="context">{}</field>
             <field name="view_id" ref="view_report_prices_by_product_graph"/>
             <field name="search_view_id" ref="view_report_prices_by_product_filter"/>
-            <field name="auto_search">False</field>
+            <field name="auto_search" eval="False"/>
             <field name="help">Debe seleccionar un producto</field>
         </record>
 

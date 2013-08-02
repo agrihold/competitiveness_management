@@ -55,10 +55,13 @@
             <field name="arch" type="xml">
                 <page string="Inventory" position="after">
                     <page string="Commercial Names">
-                        <field name="commercial_name_ids"/>
+                        <field name="commercial_name_ids"/>                       
                     </page>
                 </page>
-
+                <field name="function_type" position="after">
+                    <label for="use_in_price_management" class="oe_inline" groups="competitiveness_management.group_manager" attrs="{'invisible':[('function_type','!=','formulated')]}"/>
+                    <field name="use_in_price_management" class="oe_inline" groups="competitiveness_management.group_manager" attrs="{'invisible':[('function_type','!=','formulated')]}"/>
+                </field>                
             </field>
         </record>
 

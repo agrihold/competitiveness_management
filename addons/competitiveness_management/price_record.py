@@ -32,7 +32,7 @@ class price_record(osv.osv):
     _description = 'price_record'
 
     _columns = {
-        'product_id': fields.many2one('product.product', string='Product', required=True, context={'default_function_type':'formulated'}, domain=[('function_type','=','formulated')]),
+        'product_id': fields.many2one('product.product', string='Product', required=True, context={'default_function_type':'formulated','default_use_in_price_management':True}, domain=[('function_type','=','formulated'),('use_in_price_management','=',True)]),
         'commercial_name': fields.char(string='Commercial Name', readonly=True),
         'information_date': fields.date(string='Price Date', help=u"""Pre completar con la fecha actual""", required=True),
         'usd_price': fields.float(string='Price (USD)', required=True),
