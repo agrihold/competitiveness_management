@@ -44,7 +44,7 @@
                             />
                     <field name="operative_id" string="Operative"
                             />
-                    <field name="supplier" string="Supplier"
+                    <field name="supplier" string="Competitor"
                             />
                     <field name="invoice_number" string="Invoice Number"
                             />

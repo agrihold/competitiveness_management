@@ -90,8 +90,14 @@ msgstr "Al cargar precios se debe poder restringuir por gurpo de usuario"
 #. modules: competitiveness_management, competitiveness_management_x
 #: view:competitiveness_management.price_record:0
 #: field:competitiveness_management.price_record,supplier:0
+msgid "Competitor"
+msgstr "Competencia"
+
+#. modules: competitiveness_management, competitiveness_management_x
+#: view:competitiveness_management.price_record:0
+#: field:competitiveness_management.price_record,supplier:0
 msgid "Supplier"
-msgstr "Proveedor"
+msgstr "Competencia"
 
 #. module: competitiveness_management
 #: help:competitiveness_management.price_record,operative_id:0

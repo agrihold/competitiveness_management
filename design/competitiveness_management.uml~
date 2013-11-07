@@ -60,7 +60,7 @@
 			</model>
 		</userDefined>
 </profile>
-<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Fri Aug 02 16:01:54 BRT 2013'>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Fri Aug 02 16:15:21 BRT 2013'>
   <XMI.header>    <XMI.documentation>
       <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
       <XMI.exporterVersion>0.34(6) revised on $Date: 2010-01-11 22:20:14 +0100 (Mon, 11 Jan 2010) $ </XMI.exporterVersion>
@@ -298,14 +298,14 @@
                     </UML:TaggedValue>
                     <UML:TaggedValue xmi.id = '127-0-1-1-361a4d4d:13d4bd4a817:-8000:0000000000002888'
                       isSpecification = 'false'>
-                      <UML:TaggedValue.dataValue>{&apos;default_function_type&apos;:&apos;formulated&apos;}</UML:TaggedValue.dataValue>
+                      <UML:TaggedValue.dataValue>{&apos;default_function_type&apos;:&apos;formulated&apos;,&apos;default_use_in_price_management&apos;:True}</UML:TaggedValue.dataValue>
                       <UML:TaggedValue.type>
                         <UML:TagDefinition href = 'http://argouml.org/user-profiles/OpenObjectStadardElements.xmi#127-0-1-1--66344949:13b09938a14:-8000:00000000000011FF'/>
                       </UML:TaggedValue.type>
                     </UML:TaggedValue>
                     <UML:TaggedValue xmi.id = '127-0-1-1-361a4d4d:13d4bd4a817:-8000:0000000000002889'
                       isSpecification = 'false'>
-                      <UML:TaggedValue.dataValue>[(&apos;function_type&apos;,&apos;=&apos;,&apos;formulated&apos;)]</UML:TaggedValue.dataValue>
+                      <UML:TaggedValue.dataValue>[(&apos;function_type&apos;,&apos;=&apos;,&apos;formulated&apos;),(&apos;use_in_price_management&apos;,&apos;=&apos;,True)]</UML:TaggedValue.dataValue>
                       <UML:TaggedValue.type>
                         <UML:TagDefinition href = 'http://argouml.org/user-profiles/OpenObjectStadardElements.xmi#127-0-1-1-29a13c2b:13cb7762c9e:-8000:0000000000000ED5'/>
                       </UML:TaggedValue.type>
