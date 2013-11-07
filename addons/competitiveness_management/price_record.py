@@ -37,7 +37,7 @@ class price_record(osv.osv):
         'information_date': fields.date(string='Price Date', help=u"""Pre completar con la fecha actual""", required=True),
         'usd_price': fields.float(string='Price (USD)', required=True),
         'operative_id': fields.many2one('res.company', string='Operative', help=u"""Pre completar con la compania de contexto. Se debe filtrar solo por partners que tengan companias o definir criterio""", required=True),
-        'supplier': fields.many2one('res.partner', string='Competitor'),
+        'supplier': fields.many2one('res.partner', string='Competitor', context={'default_use_in_price_management':True}, domain=[('use_in_price_management','=',True)]),
         'invoice_number': fields.char(string='Invoice Number'),
         'user': fields.many2one('res.users', string='User', help=u"""Completar con el usuario actual""", readonly=True),
         'record_date': fields.datetime(string='Recorded', help=u"""Completar con el usuario actual""", readonly=True),

@@ -36,6 +36,7 @@
 ],
     'data': [   'view/ejemplo_view.xml',
                 'view/menuitem.xml',
+                'view/res_partner_view.xml',
                 'security/ir.model.access.csv',
                 'security/security.xml',
                 'view/product_view.xml',

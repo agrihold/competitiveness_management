@@ -21,14 +21,31 @@
 ##############################################################################
 
 
-import product
-import commercial_name
-import payment_term
-import price_type
-import record_responsibility
-import partner
-import price_record
-import wizard
-import report
+import re
+from openerp import netsvc
+from openerp.osv import osv, fields
+
+class partner(osv.osv):
+    """"""
+    
+    _name = 'res.partner'
+    _inherits = {  }
+    _inherit = [ 'res.partner' ]
+
+    _columns = {
+        'use_in_price_management': fields.boolean(string='Use in Price Management'),
+    }
+
+    _defaults = {
+    }
+
+
+    _constraints = [
+    ]
+
+
+
+
+partner()
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

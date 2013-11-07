@@ -1,215 +1,199 @@
 # Translation of OpenERP Server.
 # This file contains the translation of the following modules:
-# 	* competitiveness_management
-# 	* competitiveness_management_reports
-# 	* competitiveness_management_x
-# Juan <scarafia.juanjose@gmail.com>, 2013.
+#	* competitiveness_management
+#	* competitiveness_management_x
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenERP Server 7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-02 19:42+0000\n"
-"PO-Revision-Date: 2013-08-02 16:48-0300\n"
-"Last-Translator: Juan <scarafia.juanjose@gmail.com>\n"
-"Language-Team: Español <>\n"
+"POT-Creation-Date: 2013-11-07 23:31+0000\n"
+"PO-Revision-Date: 2013-11-07 23:31+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
 
 #. module: competitiveness_management
 #: model:ir.module.category,description:competitiveness_management.module_category_competitiveness_management
 #: model:ir.module.category,name:competitiveness_management.module_category_competitiveness_management
 #: model:ir.ui.menu,name:competitiveness_management.menu_competitiveness_management
 msgid "Competitiveness Management"
-msgstr "Gestión de la competitividad"
+msgstr ""
 
-#. modules: competitiveness_management, competitiveness_management_reports
-#: model:ir.ui.menu,name:competitiveness_management.menu_price_management
-#: model:ir.ui.menu,name:competitiveness_management_reports.menu_comp_mana
-msgid "Price Management"
-msgstr "Gestión de Precios"
+#. module: competitiveness_management
+#: view:competitiveness_management.price_record:0
+#: field:competitiveness_management.price_record,supplier:0
+msgid "Competitor"
+msgstr ""
 
 #. module: competitiveness_management
 #: model:ir.model,name:competitiveness_management.model_competitiveness_management_payment_term
 msgid "payment_term"
-msgstr "payment_term"
+msgstr ""
 
 #. module: competitiveness_management
 #: field:competitiveness_management.commercial_name,product_id:0
 #: field:competitiveness_management.payment_term,price_record_id:0
 #: field:competitiveness_management.price_type,price_record_id:0
 msgid "&lt;no label&gt;"
-msgstr "&lt;no label&gt;"
+msgstr ""
 
 #. module: competitiveness_management
 #: model:ir.actions.act_window,name:competitiveness_management.action_competitiveness_management_record_responsibility_alerts
 #: model:ir.ui.menu,name:competitiveness_management.menu_alerts
 msgid "Alerts"
-msgstr "Alertas"
+msgstr ""
 
 #. module: competitiveness_management
 #: view:competitiveness_management.price_record:0
 #: field:competitiveness_management.price_record,record_date:0
 msgid "Recorded"
-msgstr "Grabado"
+msgstr ""
 
 #. module: competitiveness_management
 #: view:product.product:0
 msgid "product"
-msgstr "producto"
+msgstr ""
 
 #. module: competitiveness_management
 #: field:competitiveness_management.record_responsibility,note:0
 msgid "Note"
-msgstr "Nota"
+msgstr ""
 
-#. modules: competitiveness_management, competitiveness_management_reports
+#. module: competitiveness_management_x
+#: field:competitiveness_management.record_responsibility,message_follower_ids:0
+msgid "Followers"
+msgstr ""
+
+#. module: competitiveness_management
 #: view:competitiveness_management.commercial_name:0
 #: view:competitiveness_management.payment_term:0
 #: view:competitiveness_management.price_record:0
 #: view:competitiveness_management.price_type:0
 #: view:competitiveness_management.record_responsibility:0
 #: view:product.product:0
+#: view:res.partner:0
 msgid "By Attribute"
-msgstr "Por Atributo"
+msgstr ""
 
 #. modules: competitiveness_management, competitiveness_management_x
 #: view:competitiveness_management.record_responsibility:0
+#: view:competitiveness_management.record_responsibility:0
 msgid "Record Responsabilities"
-msgstr "Responsabilidades de registro"
+msgstr ""
 
 #. modules: competitiveness_management, competitiveness_management_x
 #: model:ir.model,name:competitiveness_management.model_competitiveness_management_price_type
 #: model:ir.model,name:competitiveness_management_x.model_competitiveness_management_price_type
 msgid "Al cargar precios se debe poder restringuir por gurpo de usuario"
-msgstr "Al cargar precios se debe poder restringuir por gurpo de usuario"
+msgstr ""
 
-#. modules: competitiveness_management, competitiveness_management_x
-#: view:competitiveness_management.price_record:0
-#: field:competitiveness_management.price_record,supplier:0
-msgid "Competitor"
-msgstr "Competencia"
+#. module: competitiveness_management
+#: view:res.partner:0
+msgid "partner"
+msgstr ""
 
-#. modules: competitiveness_management, competitiveness_management_x
+#. module: competitiveness_management_x
 #: view:competitiveness_management.price_record:0
-#: field:competitiveness_management.price_record,supplier:0
 msgid "Supplier"
-msgstr "Competencia"
+msgstr ""
 
 #. module: competitiveness_management
 #: help:competitiveness_management.price_record,operative_id:0
-msgid ""
-"Pre completar con la compania de contexto. Se debe filtrar solo por partners "
-"que tengan companias o definir criterio"
+msgid "Pre completar con la compania de contexto. Se debe filtrar solo por partners que tengan companias o definir criterio"
 msgstr ""
-"Pre completar con la compania de contexto. Se debe filtrar solo por partners "
-"que tengan companias o definir criterio"
 
 #. module: competitiveness_management
 #: selection:competitiveness_management.record_responsibility,interval_type:0
 msgid "Weeks"
-msgstr "Semanas"
+msgstr ""
 
 #. module: competitiveness_management_x
 #: field:competitiveness_management.price_record,information_date_to:0
 msgid "Price date to"
-msgstr "Fecha de precio hasta"
+msgstr ""
 
 #. module: competitiveness_management
 #: view:competitiveness_management.price_record:0
 #: field:competitiveness_management.price_record,usd_price:0
 msgid "Price (USD)"
-msgstr "Precio (USD)"
+msgstr ""
 
-#. module: competitiveness_management_reports
-#: view:competitiveness_management.price_record:0
-#: model:ir.ui.menu,name:competitiveness_management_reports.menu_report_prices_by_product
-msgid "Prices by Product"
-msgstr "Precios por Producto"
-
-#. modules: competitiveness_management, competitiveness_management_reports, competitiveness_management_x
+#. modules: competitiveness_management, competitiveness_management_x
 #: view:competitiveness_management.price_record:0
 #: field:competitiveness_management.price_record,product_id:0
 #: model:ir.model,name:competitiveness_management.model_product_product
+#: view:competitiveness_management.price_record:0
 msgid "Product"
-msgstr "Producto"
+msgstr ""
 
-#. modules: competitiveness_management, competitiveness_management_reports
+#. module: competitiveness_management
 #: view:competitiveness_management.commercial_name:0
 #: view:competitiveness_management.payment_term:0
 #: view:competitiveness_management.price_record:0
 #: view:competitiveness_management.price_type:0
 #: view:competitiveness_management.record_responsibility:0
 #: view:product.product:0
+#: view:res.partner:0
 msgid "By object"
-msgstr "Por objeto"
+msgstr ""
 
 #. module: competitiveness_management
 #: field:competitiveness_management.price_type,require_invoice_info:0
 msgid "Requiere Invoice Info"
-msgstr "Requiere información de factura"
+msgstr ""
 
 #. module: competitiveness_management_x
 #: view:competitiveness_management.price_record:0
 msgid "Group by..."
-msgstr "Agrupar por ..."
+msgstr ""
 
 #. module: competitiveness_management_x
 #: field:competitiveness_management.record_responsibility,message_unread:0
 msgid "Unread Messages"
-msgstr "Mensajes no leídos"
-
-#. module: competitiveness_management_reports
-#: model:ir.actions.act_window,help:competitiveness_management_reports.action_report_prices_by_product
-#: model:ir.actions.act_window,help:competitiveness_management_reports.action_report_prices_by_type
-msgid "Debe seleccionar un producto"
-msgstr "Debe seleccionar un producto"
+msgstr ""
 
 #. module: competitiveness_management_x
 #: help:competitiveness_management.record_responsibility,message_summary:0
-msgid ""
-"Holds the Chatter summary (number of messages, ...). This summary is "
-"directly in html format in order to be inserted in kanban views."
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
 msgstr ""
-"Contiene el resumen del Chatter (número de mensajes , ...) . Este resumen "
-"está directamente en formato html para ser insertado en las vistas kanban ."
 
 #. module: competitiveness_management_x
 #: help:competitiveness_management.record_responsibility,message_unread:0
 msgid "If checked new messages require your attention."
-msgstr "Si se marca, nuevos mensajes requieren su atención."
+msgstr ""
 
 #. modules: competitiveness_management, competitiveness_management_x
 #: model:ir.model,name:competitiveness_management.model_competitiveness_management_price_record
 #: model:ir.model,name:competitiveness_management_x.model_competitiveness_management_price_record
 msgid "price_record"
-msgstr "price_record"
+msgstr ""
 
 #. module: competitiveness_management
 #: view:competitiveness_management.price_record:0
 #: field:competitiveness_management.price_record,information_date:0
 msgid "Price Date"
-msgstr "Fecha de Precio"
+msgstr ""
 
-#. modules: competitiveness_management, competitiveness_management_reports
+#. module: competitiveness_management
 #: view:competitiveness_management.price_record:0
 #: field:competitiveness_management.price_record,commercial_name:0
 msgid "Commercial Name"
-msgstr "Nombre Comercial"
+msgstr ""
 
 #. module: competitiveness_management
 #: view:competitiveness_management.price_record:0
 #: field:competitiveness_management.price_record,invoice_number:0
 msgid "Invoice Number"
-msgstr "Número de Factura"
+msgstr ""
 
 #. module: competitiveness_management_x
 #: field:competitiveness_management.record_responsibility,message_is_follower:0
 msgid "Is a Follower"
-msgstr "Es un seguidor"
+msgstr ""
 
 #. module: competitiveness_management
 #: view:competitiveness_management.price_record:0
@@ -217,23 +201,24 @@ msgstr "Es un seguidor"
 #: field:competitiveness_management.record_responsibility,user_id:0
 #: model:res.groups,name:competitiveness_management.group_user
 msgid "User"
-msgstr "Usuario"
+msgstr ""
 
 #. modules: competitiveness_management, competitiveness_management_x
 #: view:competitiveness_management.commercial_name:0
-#: field:product.product,commercial_name_ids:0 view:product.product:0
+#: field:product.product,commercial_name_ids:0
+#: view:product.product:0
 msgid "Commercial Names"
-msgstr "Nombres comerciales"
+msgstr ""
 
 #. module: competitiveness_management_x
 #: field:competitiveness_management.price_record,information_date_from:0
 msgid "Price date from"
-msgstr "Fecha de precio desde"
+msgstr ""
 
 #. module: competitiveness_management
 #: model:ir.ui.menu,name:competitiveness_management.menu_configuration
 msgid "Configuration"
-msgstr "Configuración"
+msgstr ""
 
 #. module: competitiveness_management
 #: view:competitiveness_management.payment_term:0
@@ -241,17 +226,12 @@ msgstr "Configuración"
 #: view:competitiveness_management.price_record:0
 #: field:competitiveness_management.price_record,price_term_id:0
 msgid "Term"
-msgstr "Plazo"
+msgstr ""
 
 #. module: competitiveness_management
 #: help:competitiveness_management.price_record,information_date:0
 msgid "Pre completar con la fecha actual"
-msgstr "Pre completar con la fecha actual"
-
-#. module: competitiveness_management_reports
-#: model:ir.actions.act_window,name:competitiveness_management_reports.action_report_prices_by_product
-msgid "Price Evolution by Product"
-msgstr "Evolución de precios por Producto"
+msgstr ""
 
 #. modules: competitiveness_management, competitiveness_management_x
 #: view:competitiveness_management.commercial_name:0
@@ -260,109 +240,104 @@ msgstr "Evolución de precios por Producto"
 #: field:competitiveness_management.price_type,name:0
 #: field:competitiveness_management.record_responsibility,name:0
 msgid "Name"
-msgstr "Nombre"
-
-#. module: competitiveness_management_reports
-#: view:competitiveness_management.price_record:0
-#: model:ir.ui.menu,name:competitiveness_management_reports.menu_report_prices_by_type
-msgid "Prices by Type"
-msgstr "Precios por Tipo"
+msgstr ""
 
 #. module: competitiveness_management
 #: field:competitiveness_management.price_type,record_responsibility_ids:0
 msgid "record_responsibility_ids"
-msgstr "record_responsibility_ids"
+msgstr ""
 
 #. modules: competitiveness_management, competitiveness_management_x
 #: model:ir.model,name:competitiveness_management.model_competitiveness_management_record_responsibility
 #: model:ir.model,name:competitiveness_management_x.model_competitiveness_management_record_responsibility
 msgid "record_responsibility"
-msgstr "record_responsibility"
+msgstr ""
 
 #. module: competitiveness_management_x
 #: help:competitiveness_management.record_responsibility,message_ids:0
 msgid "Messages and communication history"
-msgstr "Mensajes e historial de comunicación"
+msgstr ""
 
 #. module: competitiveness_management
 #: selection:competitiveness_management.record_responsibility,interval_type:0
 msgid "Months"
-msgstr "Meses"
+msgstr ""
 
 #. module: competitiveness_management_x
 #: field:competitiveness_management.record_responsibility,message_ids:0
 msgid "Messages"
-msgstr "Mensajes"
+msgstr ""
 
 #. module: competitiveness_management
 #: selection:competitiveness_management.record_responsibility,interval_type:0
 msgid "Days"
-msgstr "Días"
+msgstr ""
 
 #. module: competitiveness_management_x
 #: field:competitiveness_management.record_responsibility,message_summary:0
 msgid "Summary"
-msgstr "Resumen"
+msgstr ""
 
-#. modules: competitiveness_management, competitiveness_management_reports
+#. module: competitiveness_management
 #: view:competitiveness_management.price_record:0
 #: model:ir.actions.act_window,name:competitiveness_management.action_competitiveness_management_price_record_price_records
 #: model:ir.ui.menu,name:competitiveness_management.menu_price_records
 msgid "Price Records"
-msgstr "Registros de Precio"
+msgstr ""
 
 #. module: competitiveness_management
 #: model:ir.model,name:competitiveness_management.model_competitiveness_management_commercial_name
 msgid "commercial_name"
-msgstr "commercial_name"
+msgstr ""
 
 #. module: competitiveness_management
 #: field:competitiveness_management.record_responsibility,nextcall:0
 msgid "Next Execution Date"
-msgstr "Próxima Fecha de Ejecución"
+msgstr ""
 
 #. module: competitiveness_management_x
 #: view:competitiveness_management.price_record:0
 msgid "Project Tasks"
-msgstr "Tareas del proyecto"
+msgstr ""
 
 #. module: competitiveness_management
 #: field:product.product,use_in_price_management:0
-msgid "Use in Price Management"
-msgstr "Usar en Gestión de Precios"
-
-#. module: competitiveness_management
 #: field:res.partner,use_in_price_management:0
 msgid "Use in Price Management"
-msgstr "Usar en Gestión de Precios"
+msgstr ""
 
 #. module: competitiveness_management
 #: view:competitiveness_management.payment_term:0
 #: model:ir.actions.act_window,name:competitiveness_management.action_competitiveness_management_payment_term_payment_terms
 #: model:ir.ui.menu,name:competitiveness_management.menu_payment_terms
 msgid "Payment Terms"
-msgstr "Plazos de pago"
+msgstr ""
 
 #. module: competitiveness_management
 #: model:res.groups,name:competitiveness_management.group_view
 msgid "View"
-msgstr "Vista"
+msgstr ""
 
 #. module: competitiveness_management_x
 #: view:product.product:0
 msgid "Inventory"
-msgstr "Inventario"
+msgstr ""
 
 #. module: competitiveness_management
 #: field:competitiveness_management.record_responsibility,interval_number:0
 msgid "Interval Number"
-msgstr "Número de intervalo"
+msgstr ""
 
 #. module: competitiveness_management
 #: view:competitiveness_management.price_type:0
 #: field:competitiveness_management.price_type,code:0
 msgid "Code"
-msgstr "Código"
+msgstr ""
+
+#. module: competitiveness_management
+#: model:ir.ui.menu,name:competitiveness_management.menu_price_management
+msgid "Price Management"
+msgstr ""
 
 #. modules: competitiveness_management, competitiveness_management_x
 #: view:competitiveness_management.price_type:0
@@ -370,68 +345,54 @@ msgstr "Código"
 #: model:ir.ui.menu,name:competitiveness_management.menu_price_types
 #: field:res.users,price_type_ids:0
 msgid "Price Types"
-msgstr "Tipos de Precio"
-
-#. module: competitiveness_management_reports
-#: model:ir.ui.menu,name:competitiveness_management_reports.menu_report_prices_analysis
-msgid "Prices Analysis"
-msgstr "Análisis de Precios"
-
-#. module: competitiveness_management_reports
-#: view:competitiveness_management.price_record:0
-#: model:ir.actions.act_window,name:competitiveness_management_reports.action_report_prices_analysis
-#: model:ir.actions.report.xml,name:competitiveness_management_reports.price_analysis
-msgid "Price Analysis"
-msgstr "Análisis de Precio"
-
-#. module: competitiveness_management_reports
-#: model:ir.actions.act_window,name:competitiveness_management_reports.action_report_prices_by_type
-msgid "Price Evolution by Type"
-msgstr "Evolución de precios por Tipo"
+msgstr ""
 
 #. module: competitiveness_management_x
 #: field:competitiveness_management.record_responsibility,ir_cron_id:0
 msgid "Cron"
-msgstr "Cron"
+msgstr ""
 
 #. module: competitiveness_management
 #: help:competitiveness_management.price_record,record_date:0
 #: help:competitiveness_management.price_record,user:0
 msgid "Completar con el usuario actual"
-msgstr "Completar con el usuario actual"
+msgstr ""
 
 #. module: competitiveness_management
 #: model:res.groups,name:competitiveness_management.group_manager
 msgid "Manager"
-msgstr "Responsable"
+msgstr ""
 
 #. module: competitiveness_management_x
 #: field:competitiveness_management.price_type,users_ids:0
 #: model:ir.model,name:competitiveness_management_x.model_res_users
 msgid "Users"
-msgstr "Usuarios"
+msgstr ""
 
-#. module: competitiveness_management_x
-#: field:competitiveness_management.record_responsibility,message_follower_ids:0
-msgid "Followers"
-msgstr "Seguidores"
+#. module: competitiveness_management
+#: model:ir.model,name:competitiveness_management.model_res_partner
+msgid "Partner"
+msgstr ""
 
-#. modules: competitiveness_management, competitiveness_management_reports, competitiveness_management_x
+#. modules: competitiveness_management, competitiveness_management_x
 #: view:competitiveness_management.price_record:0
 #: field:competitiveness_management.price_record,price_type_id:0
 #: field:competitiveness_management.record_responsibility,price_type_id:0
+#: view:competitiveness_management.price_record:0
 msgid "Price Type"
-msgstr "Tipo de Precio"
+msgstr ""
 
-#. modules: competitiveness_management, competitiveness_management_reports, competitiveness_management_x
+#. modules: competitiveness_management, competitiveness_management_x
 #: view:competitiveness_management.commercial_name:0
 #: field:competitiveness_management.commercial_name,operative_id:0
 #: view:competitiveness_management.price_record:0
 #: field:competitiveness_management.price_record,operative_id:0
+#: view:competitiveness_management.price_record:0
 msgid "Operative"
-msgstr "Operativa"
+msgstr ""
 
 #. module: competitiveness_management
 #: field:competitiveness_management.record_responsibility,interval_type:0
 msgid "Interval Unit"
-msgstr "Unidad del Intervalo"
+msgstr ""
+

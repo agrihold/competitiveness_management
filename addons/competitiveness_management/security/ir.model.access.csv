@@ -17,3 +17,6 @@
 "access_competitiveness_management_commercial_name_user","competitiveness_management.commercial_name.user","model_competitiveness_management_commercial_name","group_user",1,1,1,1
 "access_competitiveness_management_commercial_name_manager","competitiveness_management.commercial_name.manager","model_competitiveness_management_commercial_name","group_manager",1,1,1,1
 "access_competitiveness_management_commercial_name_view","competitiveness_management.commercial_name.view","model_competitiveness_management_commercial_name","group_view",1,1,1,1
+"access_res_partner_user","res.partner.user","model_res_partner","group_user",1,1,1,1
+"access_res_partner_manager","res.partner.manager","model_res_partner","group_manager",1,1,1,1
+"access_res_partner_view","res.partner.view","model_res_partner","group_view",1,1,1,1
